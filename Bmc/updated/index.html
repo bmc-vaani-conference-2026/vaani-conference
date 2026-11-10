@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- ========================================================================== -->
+<!-- >>>>> START PART 00: DOCUMENT HEAD & METADATA <<<<< -->
+<!-- ========================================================================== -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="AI & Data Science: Concepts, Skills & Society — A two-day national conference conducted in Malayalam under the AICTE-VAANI Scheme. December 8–9, 2026 at Bharata Mata College (Autonomous), Thrikkakara, Kochi, Kerala." />
+  <meta name="keywords"
+    content="AI, Data Science, Concepts Skills and Society, Malayalam AI Conference, AICTE VAANI, Bharata Mata College, Thrikkakara, Kochi" />
+  <title>AI &amp; Data Science: Concepts, Skills &amp; Society | Bharata Mata College</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI & Data Science: Concepts, Skills & Society" />
+  <meta property="og:description"
+    content="Two-day conference in Malayalam under the AICTE-VAANI Scheme. Dec 8-9, 2026 at Bharata Mata College, Kochi." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Garet (local) + Plus Jakarta Sans & Space Grotesk fallback + Google Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<!-- ========================================================================== -->
+<!-- >>>>> END PART 00: DOCUMENT HEAD & METADATA <<<<< -->
+<!-- ========================================================================== -->
+
+<body>
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 01: TOP NAVIGATION BAR & ACTION BUTTONS <<<<< -->
+  <!-- ========================================================================== -->
+  <header class="top-bar" id="topBar">
+    <div class="top-bar__container">
+
+      <!-- 3 Logos Group (Left side of Navbar) -->
+      <div class="header-logos-group">
+        <!-- College Logo Banner (Left) -->
+        <div class="header-logo-item header-logo-item--bmc">
+          <img src="assets/logos/bmc-full-logo.png" alt="Bharata Mata College Autonomous | Thrikkakara, Kochi-21"
+            class="header-logo header-logo--bmc" />
+        </div>
+
+        <!-- AICTE & ATAL Logos (Closer together) -->
+        <div class="partner-logos-pair">
+          <div class="header-logo-item header-logo-item--aicte">
+            <img src="assets/logos/aicte-logo.png" alt="AICTE Logo" class="header-logo header-logo--aicte" />
+          </div>
+          <div class="header-logo-item header-logo-item--atal">
+            <img src="assets/logos/atal-logo.png" alt="ATAL Academy Logo" class="header-logo header-logo--atal" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Action Buttons (Right side of Navbar) with Golden Sliding Hover Animation -->
+      <div class="header-actions-group">
+        <a href="https://atalacademy.aicte.gov.in/" target="_blank" rel="noopener noreferrer" class="nav-gold-btn">
+          <span>Register</span>
+        </a>
+        <a href="https://forms.gle/KteEkgCyCaEmKGit8" target="_blank" rel="noopener noreferrer" class="nav-gold-btn">
+          <span>Submit Paper</span>
+        </a>
+        <a href="#contact" class="nav-gold-btn">
+          <span>Contact</span>
+        </a>
+      </div>
+
+    </div>
+    <!-- Bold Gold Accent Bar -->
+    <div class="gold-accent-stripe" aria-hidden="true"></div>
+  </header>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 01: TOP NAVIGATION BAR & ACTION BUTTONS <<<<< -->
+  <!-- ========================================================================== -->
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 02: HERO SECTION (BROCHURE FRONT COVER) <<<<< -->
+  <!-- ========================================================================== -->
+  <section id="home" class="hero" aria-label="Conference Banner">
+
+    <div class="hero__bg-ambient" aria-hidden="true"></div>
+
+    <div class="hero__parallelogram-wrap" aria-hidden="true">
+      <div class="hero__parallelogram-border"></div>
+      <div class="hero__parallelogram-frame" id="heroParallelogramFrame">
+        <canvas class="hero__pixel-canvas" id="heroPixelCanvas"></canvas>
+        <div class="hero__parallelogram-overlay"></div>
+      </div>
+    </div>
+
+    <div class="hero__container">
+      <div class="hero__content-col">
+
+        <p class="hero__scheme-title">AICTE-VAANI SCHEME &bull; TWO-DAY NATIONAL CONFERENCE</p>
+
+        <div class="hero__title-lockup">
+          <div class="hero__date-badge" aria-label="Conference dates: December 8-9, 2026">
+            <div class="date-badge__inner">
+              <span class="date-badge__month">DEC</span>
+              <span class="date-badge__days">8-9</span>
+              <span class="date-badge__year">2026</span>
+            </div>
+          </div>
+
+          <div class="hero__headline-box">
+            <span class="hero__overline">AI &amp; DATA SCIENCE</span>
+            <h1 class="hero__title">
+              Concepts, Skills<br />
+              &amp; Society
+            </h1>
+          </div>
+        </div>
+
+        <div class="hero__medium-pill">
+          <span>Conference Medium: <strong>Malayalam</strong></span>
+        </div>
+
+        <div class="hero__org-card">
+          <span class="org-card__label">ORGANISED BY</span>
+          <h2 class="org-card__depts">
+            Department of Computer Science &amp;<br />
+            Department of Malayalam
+          </h2>
+          <p class="org-card__institution">
+            Bharata Mata College (Autonomous), Thrikkakara, Kochi-21, Kerala
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 02: HERO SECTION (BROCHURE FRONT COVER) <<<<< -->
+  <!-- ========================================================================== -->
+
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 02B: COUNTDOWN TIMER <<<<< -->
+  <!-- ========================================================================== -->
+  <section id="countdown" class="cd-section" aria-label="Conference Countdown">
+
+    <!-- Animated grid background -->
+    <div class="cd-grid-bg" aria-hidden="true"></div>
+
+    <!-- Ambient corner glows -->
+    <div class="cd-glow cd-glow--left"  aria-hidden="true"></div>
+    <div class="cd-glow cd-glow--right" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="cd-inner">
+
+        <!-- Header -->
+        <div class="cd-header">
+          <div class="cd-eyebrow">
+            <div class="cd-eyebrow__line"></div>
+            <span class="cd-eyebrow__text">CONFERENCE BEGINS IN</span>
+            <div class="cd-eyebrow__line"></div>
+          </div>
+        </div>
+
+        <!-- Timer row -->
+        <div class="cd-timer" id="cdTimer">
+
+          <!-- DAYS -->
+          <div class="cd-unit">
+            <div class="cd-box">
+              <div class="cd-box__inner">
+                <div class="cd-box__scanline" aria-hidden="true"></div>
+                <div class="cd-box__divider" aria-hidden="true"></div>
+                <span class="cd-digits" id="cd-days">000</span>
+              </div>
+            </div>
+            <span class="cd-label">DAYS</span>
+          </div>
+
+          <!-- Colon separator -->
+          <div class="cd-sep" aria-hidden="true">
+            <span class="cd-sep__dot"></span>
+            <span class="cd-sep__dot"></span>
+          </div>
+
+          <!-- HOURS -->
+          <div class="cd-unit">
+            <div class="cd-box">
+              <div class="cd-box__inner">
+                <div class="cd-box__scanline" aria-hidden="true"></div>
+                <div class="cd-box__divider" aria-hidden="true"></div>
+                <span class="cd-digits" id="cd-hours">00</span>
+              </div>
+            </div>
+            <span class="cd-label">HOURS</span>
+          </div>
+
+          <!-- Colon separator -->
+          <div class="cd-sep" aria-hidden="true">
+            <span class="cd-sep__dot"></span>
+            <span class="cd-sep__dot"></span>
+          </div>
+
+          <!-- MINUTES -->
+          <div class="cd-unit">
+            <div class="cd-box">
+              <div class="cd-box__inner">
+                <div class="cd-box__scanline" aria-hidden="true"></div>
+                <div class="cd-box__divider" aria-hidden="true"></div>
+                <span class="cd-digits" id="cd-minutes">00</span>
+              </div>
+            </div>
+            <span class="cd-label">MINUTES</span>
+          </div>
+
+          <!-- Colon separator -->
+          <div class="cd-sep" aria-hidden="true">
+            <span class="cd-sep__dot"></span>
+            <span class="cd-sep__dot"></span>
+          </div>
+
+          <!-- SECONDS -->
+          <div class="cd-unit">
+            <div class="cd-box">
+              <div class="cd-box__inner">
+                <div class="cd-box__scanline" aria-hidden="true"></div>
+                <div class="cd-box__divider" aria-hidden="true"></div>
+                <span class="cd-digits" id="cd-seconds">00</span>
+              </div>
+            </div>
+            <span class="cd-label">SECONDS</span>
+          </div>
+
+        </div>
+
+        <!-- Bottom info strip -->
+        <div class="cd-info-strip">
+          <div class="cd-info-strip__line"></div>
+          <div class="cd-info-strip__content">
+            <span class="cd-info-item">December 8 &ndash; 9, 2026</span>
+            <span class="cd-info-dot" aria-hidden="true"></span>
+            <span class="cd-info-item">9:30 AM IST</span>
+            <span class="cd-info-dot" aria-hidden="true"></span>
+            <span class="cd-info-item">Bharata Mata College, Thrikkakara, Kochi</span>
+          </div>
+          <div class="cd-info-strip__line"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 02B: COUNTDOWN TIMER <<<<< -->
+  <!-- ========================================================================== -->
+
+
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 03: ABOUT THE CONFERENCE <<<<< -->
+  <!-- ========================================================================== -->
+  <section id="about" class="section section--light">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-heading">About the Conference</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text-column">
+          <p class="lead-paragraph">
+            Artificial Intelligence and Data Science are rapidly transforming various sectors, including education,
+            healthcare, agriculture, governance, and industry.
+          </p>
+          <p>
+            This two-day conference, organised under the <strong>AICTE-VAANI (Vibrant Advocacy for Advancement and
+              Nurturing of Indian Languages) Scheme</strong>, aims to promote the dissemination of technical knowledge
+            in Malayalam and create awareness about emerging developments in Artificial Intelligence and related
+            technologies.
+          </p>
+          <p>
+            The conference provides a common platform for academicians, researchers, students, industry professionals,
+            and technology enthusiasts to explore contemporary advancements in AI and Data Science, exchange research
+            ideas, and discuss their applications and societal impact through <strong>expert-led technical sessions
+              conducted in Malayalam</strong>.
+          </p>
+        </div>
+
+        <div class="about-highlights-column">
+          <div class="feature-card feature-card--gold">
+            <div class="feature-card__info">
+              <h3>AICTE-VAANI Scheme</h3>
+              <p>Promoting indigenous language computing and high-tech education in Malayalam.</p>
+            </div>
+          </div>
+
+          <div class="feature-card feature-card--navy">
+            <div class="feature-card__info">
+              <h3>Free Registration</h3>
+              <p>Supported by AICTE ATAL Academy. Open to faculty, researchers, and students.</p>
+            </div>
+          </div>
+
+          <div class="feature-card feature-card--gold">
+            <div class="feature-card__info">
+              <h3>ISBN Publication</h3>
+              <p>Accepted and presented papers will be published with ISBN: <strong>978-81-985405-9-1</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 03: ABOUT THE CONFERENCE <<<<< -->
+  <!-- ========================================================================== -->
+
+
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 04: ABOUT BHARATA MATA COLLEGE <<<<< -->
+  <!-- ========================================================================== -->
+  <section id="college" class="section section--white">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-heading">About Bharata Mata College</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="college-grid">
+        <div class="college-image-box">
+          <img src="assets/college/bmc.jpg" alt="Bharata Mata College Campus Thrikkakara" class="college-photo"
+            onerror="this.src='assets/college/college-campus.jpg';" />
+          <div class="college-photo-badge">
+            <span class="badge-accreditation">NAAC A+ Accredited</span>
+            <span class="badge-est">Established in 1965</span>
+          </div>
+        </div>
+
+        <div class="college-info-box">
+          <div class="motto-ribbon">
+            <span class="motto-tag">College Motto</span>
+            <blockquote class="motto-quote">"For God and country"</blockquote>
+          </div>
+          <p>
+            <strong>Bharata Mata College (Autonomous) Thrikkakara</strong>, a prestigious institution established in
+            1965 under the Bharata Mata educational trust, is affiliated with <strong>Mahatma Gandhi University</strong>
+            and managed by the <strong>Archdiocese of Ernakulam-Angamaly</strong>.
+          </p>
+          <p>
+            Located along the seaport-airport road in Thrikkakara, the college has earned an <strong>A+ grade from the
+              National Assessment and Accreditation Council (NAAC) in 2019</strong>, reflecting its sustained commitment
+            to quality education.
+          </p>
+          <p>
+            Emphasizing its motto "For God and country", the college provides a holistic educational experience
+            prioritizing responsible citizenship, a secular outlook, and moral values. This approach aims to cultivate
+            exceptional individuals prepared to tackle global challenges with academic excellence and ethical fortitude.
+          </p>
+          <a href="https://www.bharatamatacollege.in/" target="_blank" rel="noopener noreferrer" class="link-arrow">
+            Visit Official College Website →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 04: ABOUT BHARATA MATA COLLEGE <<<<< -->
+  <!-- ========================================================================== -->
+
+
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 05: ABOUT THE DEPARTMENTS <<<<< -->
+  <!-- ========================================================================== -->
+  <section id="departments" class="section section--light">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-heading">Organising Departments</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="depts-grid">
+        <div class="dept-box">
+          <div class="dept-header-tag">Government-Aided Stream</div>
+          <h3 class="dept-title">Department of Computer Science</h3>
+          <p class="dept-desc">
+            Established in <strong>January 2021</strong> within the Government-aided stream, the Department of Computer
+            Science offers a pioneering <strong>Integrated MSc in AI and Machine Learning</strong>.
+          </p>
+          <p class="dept-desc">
+            The program blends theoretical foundation with practical skills and ethical values, equipping socially
+            responsible graduates to address modern technological challenges across academia and industries worldwide.
+          </p>
+        </div>
+
+        <div class="dept-box">
+          <div class="dept-header-tag">Pioneer in Vocational Malayalam</div>
+          <h3 class="dept-title">Department of Malayalam</h3>
+          <p class="dept-desc">
+            Established in <strong>1965</strong> for second-language Malayalam, the department launched Kerala’s first
+            <strong>BA Malayalam Copywriting (Vocational)</strong> course in 1998 under Prof. Somavarma Raja.
+          </p>
+          <p class="dept-desc">
+            Designed for practical industry integration, it has successfully prepared students for reputable positions
+            across leading media houses, creative communications, literature, and distinguished teaching careers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 05: ABOUT THE DEPARTMENTS <<<<< -->
+  <!-- ========================================================================== -->
+
+
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 06: CONFERENCE OBJECTIVES <<<<< -->
+  <!-- ========================================================================== -->
+  <section id="objectives" class="section section--white">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-heading">Conference Objectives</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="objectives-grid">
+        <div class="objective-card">
+          <span class="obj-number">01</span>
+          <h4>Bridging the Language Gap</h4>
+          <p>Disseminating advanced technical and AI knowledge in Malayalam to make technology inclusive and
+            vernacularly accessible.</p>
+        </div>
+
+        <div class="objective-card">
+          <span class="obj-number">02</span>
+          <h4>Promoting Emerging Technologies</h4>
+          <p>Creating deep awareness about modern developments in Artificial Intelligence, Machine Learning, and Big
+            Data.</p>
+        </div>
+
+        <div class="objective-card">
+          <span class="obj-number">03</span>
+          <h4>Encouraging Research &amp; Innovation</h4>
+          <p>Providing a platform for young researchers, academicians, and scholars to present novel and
+            interdisciplinary ideas.</p>
+        </div>
+
+        <div class="objective-card">
+          <span class="obj-number">04</span>
+          <h4>Strengthening Industry Collaboration</h4>
+          <p>Bridging academia with leading IT firms, Infopark organizations, and regional development initiatives.</p>
+        </div>
+
+        <div class="objective-card">
+          <span class="obj-number">05</span>
+          <h4>Promoting Inclusive Technical Education</h4>
+          <p>Democratizing AI literacy across all academic streams through accessible Malayalam-medium presentations.
+          </p>
+        </div>
+
+        <div class="objective-card">
+          <span class="obj-number">06</span>
+          <h4>Addressing Societal Challenges</h4>
+          <p>Examining ethical, cultural, linguistic, and public administration impacts of AI in Kerala and beyond.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 06: CONFERENCE OBJECTIVES <<<<< -->
+  <!-- ========================================================================== -->
+
+
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 07: WHO CAN PARTICIPATE <<<<< -->
+  <!-- ========================================================================== -->
+  <section id="participate" class="section section--light participate-section">
+    <!-- Faint Dot Grid Overlay -->
+    <div class="participate-grid-bg" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="participate-layout">
+
+        <!-- Left Column: Robot Illustration, Animated PCB Traces & Glass Pills -->
+        <div class="participate-image-col">
+
+          <!-- Soft Blurred Radial Glow Behind Robot -->
+          <div class="participate-glow" aria-hidden="true"></div>
+
+          <!-- Stage Container for Robot, SVG Circuit Traces, and Floating Badges -->
+          <div class="participate-stage">
+
+            <!-- Animated Circuit-Board Traces (SVG Layer) -->
+            <svg class="participate-pcb-svg" viewBox="0 0 540 540" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <defs>
+                <!-- Linear Gradient for Traces running toward the text side (fades out) -->
+                <linearGradient id="pcb-fade-right" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35" />
+                  <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.2" />
+                  <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+                </linearGradient>
+                <!-- Pulse Gradient for glowing packets (Pure White) -->
+                <linearGradient id="pcb-pulse-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="60%" stop-color="#ffffff" stop-opacity="0.85" />
+                  <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                </linearGradient>
+                <!-- Soft Glow Filter -->
+                <filter id="pcb-glow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="2.5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- TRACE 1: Branching toward Top -->
+              <path class="pcb-trace" id="trace-top" d="M 265 200 L 265 110 L 285 90 L 285 45" />
+              <path class="pcb-pulse pulse-top" d="M 265 200 L 265 110 L 285 90 L 285 45" />
+
+              <!-- TRACE 2: Branching toward Top-Left -->
+              <path class="pcb-trace" id="trace-top-left" d="M 230 250 L 175 250 L 125 200 L 125 155 L 75 155" />
+              <path class="pcb-pulse pulse-top-left" d="M 230 250 L 175 250 L 125 200 L 125 155 L 75 155" />
+
+              <!-- TRACE 3: Branching toward Mid-Left -->
+              <path class="pcb-trace" id="trace-mid-left" d="M 215 330 L 145 330 L 95 380 L 45 380" />
+              <path class="pcb-pulse pulse-mid-left" d="M 215 330 L 145 330 L 95 380 L 45 380" />
+              <!-- PCB sub-branch -->
+              <path class="pcb-trace" d="M 145 330 L 145 420 L 115 450" />
+
+              <!-- TRACE 4: Branching toward Down-Left -->
+              <path class="pcb-trace" id="trace-down-left" d="M 245 410 L 245 470 L 195 520 L 120 520" />
+              <path class="pcb-pulse pulse-down-left" d="M 245 410 L 245 470 L 195 520 L 120 520" />
+
+              <!-- TRACE 5: Branching toward Right -->
+              <path class="pcb-trace pcb-trace--fade" id="trace-right" d="M 345 220 L 400 220 L 440 250 L 495 250" />
+              <path class="pcb-pulse pulse-right" d="M 345 220 L 400 220 L 440 250 L 495 250" />
+
+              <!-- TRACE 6: Upward Power Rail (Above Question Mark) -->
+              <path class="pcb-trace" id="trace-power-up" d="M 315 140 L 315 65 L 345 35 L 390 35" />
+              <path class="pcb-pulse pulse-power-up" d="M 315 140 L 315 65 L 345 35 L 390 35" />
+
+              <!-- TRACE 7: Downward Ground Rail -->
+              <path class="pcb-trace" id="trace-power-down" d="M 290 440 L 290 500 L 325 535 L 370 535" />
+              <path class="pcb-pulse pulse-power-down" d="M 290 440 L 290 500 L 325 535 L 370 535" />
+            </svg>
+
+            <!-- Robot Illustration & Micro-Animations Wrapper -->
+            <div class="participate-graphic-wrap">
+              <img src="assets/college/brochure-cover.png" alt="Who Can Participate Illustration" class="participate-graphic" />
+
+              <!-- Subtle Pulsing Glow on Question Mark -->
+              <div class="question-mark-glow" aria-hidden="true"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Content Column -->
+        <div class="participate-content-col">
+          <div class="section-title-wrap participate-title-wrap">
+            <h2 class="participate-heading">Who Can Participate?</h2>
+            <div class="participate-underline"></div>
+          </div>
+
+          <p class="participate-lead">
+            Participation is open to faculty members, postgraduate students, research scholars, and industry
+            professionals from all academic disciplines.
+          </p>
+          <p class="participate-muted">
+            AI enthusiasts from diverse fields of study are encouraged to participate and present their research papers,
+            innovative ideas, and interdisciplinary contributions in Artificial Intelligence, Data Science, and emerging
+            technologies.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 07: WHO CAN PARTICIPATE <<<<< -->
+  <!-- ========================================================================== -->
+
+
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 08: CONFERENCE TRACKS (RESEARCH MATRIX) <<<<< -->
+  <!-- ========================================================================== -->
+  <section id="tracks" class="section section--white">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-heading">Conference Tracks</h2>
+        <div class="title-underline"></div>
+        <p class="section-caption">Original, unpublished research contributions are invited across five peer-reviewed
+          thematic tracks. All technical presentations and paper discussions are conducted in Malayalam under the
+          AICTE-VAANI scheme.</p>
+      </div>
+
+      <!-- Tracks Matrix Grid -->
+      <div class="tracks-matrix">
+
+        <!-- Track 01 -->
+        <article class="track-card">
+          <div class="track-card__header">
+            <div class="track-number-wrap">
+              <span class="track-num">01</span>
+              <span class="track-label">TRACK</span>
+            </div>
+            <span class="track-domain-tag">Core AI &amp; Foundations</span>
+          </div>
+          <h3 class="track-card__title">Foundations of Artificial Intelligence &amp; Advanced Models</h3>
+          <p class="track-card__summary">Theoretical foundations, computational algorithms, and scalable deep learning
+            architectures powering modern autonomous and predictive systems.</p>
+          <span class="topics-heading">SUBMISSION TOPICS INCLUDE</span>
+          <div class="track-topics-list">
+            <span class="topic-tag">Deep Learning Architectures</span>
+            <span class="topic-tag">Neural Networks &amp; Transformers</span>
+            <span class="topic-tag">Computer Vision</span>
+            <span class="topic-tag">Data Mining &amp; Analytics</span>
+            <span class="topic-tag">Predictive Modeling</span>
+            <span class="topic-tag">Reinforcement Learning</span>
+          </div>
+        </article>
+
+        <!-- Track 02 -->
+        <article class="track-card">
+          <div class="track-card__header">
+            <div class="track-number-wrap">
+              <span class="track-num">02</span>
+              <span class="track-label">TRACK</span>
+            </div>
+            <span class="track-domain-tag">Workforce &amp; Industry</span>
+          </div>
+          <h3 class="track-card__title">Upskilling and Reskilling for Industry 4.0 / 5.0</h3>
+          <p class="track-card__summary">Preparing academic curricula, technical professionals, and organizations for
+            human-AI synergy, automation, and intelligent industrial transformation.</p>
+          <span class="topics-heading">SUBMISSION TOPICS INCLUDE</span>
+          <div class="track-topics-list">
+            <span class="topic-tag">Future of Work &amp; Automation</span>
+            <span class="topic-tag">Curriculum Innovation</span>
+            <span class="topic-tag">Human-AI Collaboration</span>
+            <span class="topic-tag">Industrial IoT &amp; Robotics</span>
+            <span class="topic-tag">Technical Upskilling Frameworks</span>
+            <span class="topic-tag">Smart Manufacturing</span>
+          </div>
+        </article>
+
+        <!-- Track 03 -->
+        <article class="track-card">
+          <div class="track-card__header">
+            <div class="track-number-wrap">
+              <span class="track-num">03</span>
+              <span class="track-label">TRACK</span>
+            </div>
+            <span class="track-domain-tag">Ethics &amp; Society</span>
+          </div>
+          <h3 class="track-card__title">Societal Impact, Ethics, Security &amp; Applications</h3>
+          <p class="track-card__summary">Critical discourse on responsible algorithmic governance, security
+            architectures, and impactful cross-sector deployments in healthcare, agriculture, and urban infrastructure.
+          </p>
+          <span class="topics-heading">SUBMISSION TOPICS INCLUDE</span>
+          <div class="track-topics-list">
+            <span class="topic-tag">Ethical AI &amp; Algorithmic Fairness</span>
+            <span class="topic-tag">Data Privacy &amp; Cryptography</span>
+            <span class="topic-tag">AI in Healthcare Diagnostics</span>
+            <span class="topic-tag">Smart Agriculture &amp; Agritech</span>
+            <span class="topic-tag">Cybersecurity Defense</span>
+            <span class="topic-tag">Explainable AI (XAI)</span>
+          </div>
+        </article>
+
+        <!-- Track 04 (AICTE-VAANI Flagship) -->
+        <article class="track-card track-card--flagship">
+          <div class="track-card__header">
+            <div class="track-number-wrap">
+              <span class="track-num">04</span>
+              <span class="track-label">TRACK</span>
+            </div>
+            <span class="track-domain-tag track-domain-tag--flagship">AICTE-VAANI Flagship</span>
+          </div>
+          <h3 class="track-card__title">Regional Language Computing &amp; Digital Preservation</h3>
+          <p class="track-card__summary">Pioneering indigenous language technologies, Malayalam computational
+            linguistics, regional AI tools, and long-term digital cultural archiving.</p>
+          <span class="topics-heading">SUBMISSION TOPICS INCLUDE</span>
+          <div class="track-topics-list">
+            <span class="topic-tag">Malayalam Natural Language Processing</span>
+            <span class="topic-tag">Speech Recognition (ASR)</span>
+            <span class="topic-tag">Optical Character Recognition (OCR)</span>
+            <span class="topic-tag">Indic Language LLMs</span>
+            <span class="topic-tag">Corpus Creation &amp; Annotation</span>
+            <span class="topic-tag">Digital Cultural Heritage</span>
+          </div>
+        </article>
+
+        <!-- Track 05 (Featured Full-Width Card) -->
+        <article class="track-card track-card--featured">
+          <div class="track-featured__inner">
+            <div class="track-featured__primary">
+              <div class="track-card__header">
+                <div class="track-number-wrap">
+                  <span class="track-num">05</span>
+                  <span class="track-label">TRACK</span>
+                </div>
+                <span class="track-domain-tag">Public Policy &amp; Civic Tech</span>
+              </div>
+              <h3 class="track-card__title">AI in E-Governance, Policy &amp; Public Administration</h3>
+              <p class="track-card__summary">Transforming governance infrastructure, citizen service automation,
+                state-level digital welfare programs, and open data policies through responsible artificial
+                intelligence.</p>
+            </div>
+            <div class="track-featured__secondary">
+              <span class="topics-heading">SUBMISSION TOPICS INCLUDE</span>
+              <div class="track-topics-list">
+                <span class="topic-tag">Public Service Automation</span>
+                <span class="topic-tag">Evidence-Based Policy Design</span>
+                <span class="topic-tag">Civic Tech Platforms</span>
+                <span class="topic-tag">Transparent Governance</span>
+                <span class="topic-tag">State Welfare Delivery Systems</span>
+                <span class="topic-tag">Smart Cities &amp; Public Data</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Tracks Action & Guidance Strip -->
+      <div class="tracks-cta-banner">
+        <div class="tracks-cta-banner__info">
+          <div class="tracks-cta-badge">CALL FOR PAPERS</div>
+          <p class="tracks-cta-text">All submissions undergo double-blind peer review by the academic committee.
+            Accepted papers will be featured in technical presentation sessions and official conference proceedings.</p>
+        </div>
+        <div class="tracks-cta-banner__action">
+          <a href="https://forms.gle/KteEkgCyCaEmKGit8" target="_blank" rel="noopener noreferrer" class="btn btn--navy">
+            <span>Submit Abstract / Paper</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 08: CONFERENCE TRACKS (RESEARCH MATRIX) <<<<< -->
+  <!-- ========================================================================== -->
+
+
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 09: IMPORTANT DATES & TIMELINE <<<<< -->
+  <!-- ========================================================================== -->
+  <section id="dates" class="section section--navy text-white dates-section">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <h2 class="section-heading text-white">Important Dates</h2>
+        <div class="title-underline title-underline--gold"></div>
+      </div>
+
+      <!-- Clean White Table Container -->
+      <div class="dates-table-card">
+        <table class="dates-table">
+          <thead>
+            <tr>
+              <th scope="col" class="dates-th dates-th--event">Event</th>
+              <th scope="col" class="dates-th dates-th--date">Date</th>
+              <th scope="col" class="dates-th dates-th--details">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dates-tr">
+              <td class="dates-td dates-td--event">Abstract / Full Paper Submission (Deadline)</td>
+              <td class="dates-td dates-td--date">DEC 05, 2026</td>
+              <td class="dates-td dates-td--details">Submit your research draft with author details for peer review.
+              </td>
+            </tr>
+            <tr class="dates-tr">
+              <td class="dates-td dates-td--event">Last Date of Registration</td>
+              <td class="dates-td dates-td--date">DEC 05, 2026</td>
+              <td class="dates-td dates-td--details">Enroll for free through the official AICTE ATAL portal.</td>
+            </tr>
+            <tr class="dates-tr">
+              <td class="dates-td dates-td--event">Conference Days</td>
+              <td class="dates-td dates-td--date">DEC 08-09, 2026</td>
+              <td class="dates-td dates-td--details">Two days of keynote lectures, technical sessions, and paper
+                presentations.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 09: IMPORTANT DATES & TIMELINE <<<<< -->
+  <!-- ========================================================================== -->
+
+
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 10: CALL FOR PAPERS (ISBN PUBLICATION) <<<<< -->
+  <!-- ========================================================================== -->
+  <section id="papers" class="section section--light">
+    <div class="container">
+      <div class="cfp-card">
+        <div class="cfp-header">
+          <span class="badge-gold">PEER REVIEWED PROCEEDINGS</span>
+          <h2 class="cfp-title">Call for Papers</h2>
+          <p class="cfp-lead">
+            All accepted and presented papers will be published in the conference proceedings with an official ISBN.
+          </p>
+        </div>
+
+        <div class="isbn-highlight-bar">
+          <span class="isbn-label">PUBLICATION ISBN</span>
+          <span class="isbn-code">978-81-985405-9-1</span>
+        </div>
+
+        <p class="cfp-text">
+          Submit your original research papers, case studies, and interdisciplinary contributions focusing on AI and
+          Data Science. Presentations and papers are encouraged in Malayalam and English as per conference guidelines.
+        </p>
+
+        <div class="cfp-actions">
+          <a href="https://forms.gle/KteEkgCyCaEmKGit8" target="_blank" rel="noopener noreferrer"
+            class="btn btn--gold btn--lg">
+            Submit / Register Paper Online →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 10: CALL FOR PAPERS (ISBN PUBLICATION) <<<<< -->
+  <!-- ========================================================================== -->
+
+
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 11: KEYNOTE SPEAKERS <<<<< -->
+  <!-- ========================================================================== -->
+  <section id="speakers" class="section section--white">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-heading">Keynote Speakers</h2>
+        <div class="title-underline"></div>
+        <p class="section-caption">Eminent leaders and researchers from industry, government bodies, and premier
+          universities.</p>
+      </div>
+
+      <div class="speakers-grid">
+
+        <!-- Speaker 1 -->
+        <div class="speaker-card">
+          <div class="speaker-card__avatar-wrap">
+            <img src="assets/speakers/binu-janardanan.jpg" alt="Er. Binu Janardanan" class="speaker-photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="speaker-initials" style="display:none;">BJ</div>
+          </div>
+          <div class="speaker-card__info">
+            <h4 class="speaker-name">Er. Binu Janardanan</h4>
+            <p class="speaker-designation">Scientist F / Associate Director</p>
+            <p class="speaker-org">Health Technology Group<br />C-DAC Trivandrum</p>
+          </div>
+        </div>
+
+        <!-- Speaker 2 -->
+        <div class="speaker-card">
+          <div class="speaker-card__avatar-wrap">
+            <img src="assets/speakers/joy-sebastian.jpg" alt="Mr. Joy Sebastian" class="speaker-photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="speaker-initials" style="display:none;">JS</div>
+          </div>
+          <div class="speaker-card__info">
+            <h4 class="speaker-name">Mr. Joy Sebastian</h4>
+            <p class="speaker-designation">Chief Executive Officer (CEO)</p>
+            <p class="speaker-org">Techgentsia<br />Infopark, Kochi</p>
+          </div>
+        </div>
+
+        <!-- Speaker 3 -->
+        <div class="speaker-card">
+          <div class="speaker-card__avatar-wrap">
+            <img src="assets/speakers/yadu-krishnan.jpg" alt="Yadu Krishnan" class="speaker-photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="speaker-initials" style="display:none;">YK</div>
+          </div>
+          <div class="speaker-card__info">
+            <h4 class="speaker-name">Yadu Krishnan</h4>
+            <p class="speaker-designation">Product Designer</p>
+            <p class="speaker-org">KeyValue Software Systems<br />Infopark, Kochi</p>
+          </div>
+        </div>
+
+        <!-- Speaker 4 -->
+        <div class="speaker-card">
+          <div class="speaker-card__avatar-wrap">
+            <img src="assets/speakers/vivek.jpg" alt="Dr. Vivek Vivek P" class="speaker-photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="speaker-initials" style="display:none;">VV</div>
+          </div>
+          <div class="speaker-card__info">
+            <h4 class="speaker-name">Dr. Vivek Vivek P</h4>
+            <p class="speaker-designation">Director, IT Directorate &amp; Asst. Professor</p>
+            <p class="speaker-org">UGC-MMTTC<br />Kannur University</p>
+          </div>
+        </div>
+
+        <!-- Speaker 5 -->
+        <div class="speaker-card">
+          <div class="speaker-card__avatar-wrap">
+            <img src="assets/speakers/baiju-kb.jpg" alt="Dr. Baiju K B" class="speaker-photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="speaker-initials" style="display:none;">BK</div>
+          </div>
+          <div class="speaker-card__info">
+            <h4 class="speaker-name">Dr. Baiju K B</h4>
+            <p class="speaker-designation">Assistant Professor &amp; HoD of Computer Science</p>
+            <p class="speaker-org">NMSM Govt College</p>
+          </div>
+        </div>
+
+        <!-- Speaker 6 -->
+        <div class="speaker-card">
+          <div class="speaker-card__avatar-wrap">
+            <img src="assets/speakers/sreeraj-m.jpg" alt="Dr. Sreeraj M" class="speaker-photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="speaker-initials" style="display:none;">SM</div>
+          </div>
+          <div class="speaker-card__info">
+            <h4 class="speaker-name">Dr. Sreeraj M</h4>
+            <p class="speaker-designation">Assistant Professor</p>
+            <p class="speaker-org">Department of Computer Science<br />Sree Ayyappa College</p>
+          </div>
+        </div>
+
+        <!-- Speaker 7 -->
+        <div class="speaker-card">
+          <div class="speaker-card__avatar-wrap">
+            <img src="assets/speakers/benson-cc.jpg" alt="Dr. Benson C C" class="speaker-photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="speaker-initials" style="display:none;">BC</div>
+          </div>
+          <div class="speaker-card__info">
+            <h4 class="speaker-name">Dr. Benson C C</h4>
+            <p class="speaker-designation">Assistant Professor</p>
+            <p class="speaker-org">Department of Computer Applications<br />Mar Dionysius College</p>
+          </div>
+        </div>
+
+        <!-- Speaker 8 -->
+        <div class="speaker-card">
+          <div class="speaker-card__avatar-wrap">
+            <img src="assets/speakers/raji-nr.jpg" alt="Dr. Raji N R" class="speaker-photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="speaker-initials" style="display:none;">RN</div>
+          </div>
+          <div class="speaker-card__info">
+            <h4 class="speaker-name">Dr. Raji N R</h4>
+            <p class="speaker-designation">Assistant Professor &amp; In-charge</p>
+            <p class="speaker-org">Department of Computer Science<br />NISH</p>
+          </div>
+        </div>
+
+        <!-- Speaker 9 -->
+        <div class="speaker-card">
+          <div class="speaker-card__avatar-wrap">
+            <img src="assets/speakers/aljinu-khader.jpg" alt="Dr. Aljinu Khader K V" class="speaker-photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="speaker-initials" style="display:none;">AK</div>
+          </div>
+          <div class="speaker-card__info">
+            <h4 class="speaker-name">Dr. Aljinu Khader K V</h4>
+            <p class="speaker-designation">Assistant Professor</p>
+            <p class="speaker-org">Department of Computer Science<br />University of Calicut</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 11: KEYNOTE SPEAKERS <<<<< -->
+  <!-- ========================================================================== -->
+
+
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 12: REGISTRATION GUIDE (STEP-BY-STEP) <<<<< -->
+  <!-- ========================================================================== -->
+  <section id="registration" class="section section--light">
+    <div class="container max-w-900">
+      <div class="section-title-wrap">
+        <h2 class="section-heading">Registration Guide</h2>
+        <div class="title-underline"></div>
+        <div class="free-reg-banner">
+          <span class="free-text">Registration is <strong>100% FREE</strong> under AICTE-VAANI Scheme</span>
+        </div>
+      </div>
+
+      <div class="registration-steps-list">
+
+        <div class="reg-step-row">
+          <div class="step-badge">1</div>
+          <div class="step-body">
+            <h4>Visit the AICTE ATAL Academy Portal</h4>
+            <p>Access the official portal at <a href="https://atalacademy.aicte.gov.in/" target="_blank"
+                rel="noopener noreferrer">atalacademy.aicte.gov.in</a></p>
+          </div>
+        </div>
+
+        <div class="reg-step-row">
+          <div class="step-badge">2</div>
+          <div class="step-body">
+            <h4>Sign Up / Login</h4>
+            <p>New participants should click Sign Up and create an account at <a
+                href="https://atalacademy.aicte.gov.in/signup" target="_blank"
+                rel="noopener noreferrer">atalacademy.aicte.gov.in/signup</a></p>
+          </div>
+        </div>
+
+        <div class="reg-step-row">
+          <div class="step-badge">3</div>
+          <div class="step-body">
+            <h4>Navigate to FDPs Menu</h4>
+            <p>After logging into your dashboard, go to the <strong>FDPs</strong> menu.</p>
+          </div>
+        </div>
+
+        <div class="reg-step-row">
+          <div class="step-badge">4</div>
+          <div class="step-body">
+            <h4>Filter &amp; Search for the Conference</h4>
+            <p>Select: <strong>FDP Type: VAANI</strong> | <strong>Month: December</strong> | <strong>Mode:
+                Offline</strong></p>
+            <p>Press <kbd>Ctrl + F</kbd> and search for:</p>
+            <div class="app-number-box">
+              <span class="app-title-text">Artificial Intelligence: Concepts, Skills and Society</span>
+              <div class="app-num-tag">
+                <span>Application Number:</span>
+                <strong>2574946848</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reg-step-row">
+          <div class="step-badge">5</div>
+          <div class="step-body">
+            <h4>Select Bharata Mata College</h4>
+            <p>Apply for the conference organized by <strong>Bharata Mata College, Kochi, Kerala</strong> (Department of
+              Computer Science – AI &amp; ML and Department of Malayalam).</p>
+          </div>
+        </div>
+
+        <div class="reg-step-row">
+          <div class="step-badge">6</div>
+          <div class="step-body">
+            <h4>Complete Profile &amp; Required Documents</h4>
+            <p>Fill in your institutional details, NOC/identity verification if prompted by ATAL portal.</p>
+          </div>
+        </div>
+
+        <div class="reg-step-row">
+          <div class="step-badge">7</div>
+          <div class="step-body">
+            <h4>Click Apply / Submit</h4>
+            <p>Complete your registration to receive confirmation and attendance guidelines.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-30">
+        <a href="https://atalacademy.aicte.gov.in/" target="_blank" rel="noopener noreferrer"
+          class="btn btn--gold btn--lg">
+          Register for Free on ATAL Portal →
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 12: REGISTRATION GUIDE (STEP-BY-STEP) <<<<< -->
+  <!-- ========================================================================== -->
+
+
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 13: ORGANIZING COMMITTEE <<<<< -->
+  <!-- ========================================================================== -->
+  <section id="committee" class="section section--navy text-white committee-section">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="section-title-wrap text-center">
+        <span class="committee-eyebrow">LEADERSHIP &amp; COMMITTEE</span>
+        <h2 class="section-heading text-white">Organizing Committee</h2>
+        <div class="title-underline title-underline--gold"></div>
+      </div>
+
+      <div class="committee-content">
+
+        <!-- Tier 1: Chief Patrons (Most Prominent) -->
+        <div class="committee-tier committee-tier--chief">
+          <div class="comm-tier-header">
+            <h3 class="comm-tier-title">Chief Patrons</h3>
+            <div class="comm-tier-line" aria-hidden="true"></div>
+          </div>
+          <div class="comm-grid comm-grid--chief">
+
+            <div class="comm-card comm-card--chief">
+              <div class="comm-avatar comm-avatar--lg" aria-hidden="true">
+                <span class="comm-avatar__initials">AO</span>
+              </div>
+              <div class="comm-card__info">
+                <h4 class="comm-name comm-name--lg">Rev. Fr. Dr. Abraham Oliapurath</h4>
+                <p class="comm-role comm-role--accent">Manager</p>
+                <p class="comm-inst">Bharata Mata College</p>
+              </div>
+            </div>
+
+            <div class="comm-card comm-card--chief">
+              <div class="comm-avatar comm-avatar--lg" aria-hidden="true">
+                <span class="comm-avatar__initials">SK</span>
+              </div>
+              <div class="comm-card__info">
+                <h4 class="comm-name comm-name--lg">Rev. Fr. Sebastian (Sen) Kallungal</h4>
+                <p class="comm-role comm-role--accent">Assistant Manager</p>
+                <p class="comm-inst">Bharata Mata College</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tier 2: Patrons -->
+        <div class="committee-tier committee-tier--patrons">
+          <div class="comm-tier-header">
+            <h3 class="comm-tier-title">Patrons</h3>
+            <div class="comm-tier-line" aria-hidden="true"></div>
+          </div>
+          <div class="comm-grid comm-grid--patrons">
+
+            <div class="comm-card comm-card--patron">
+              <div class="comm-avatar comm-avatar--md" aria-hidden="true">
+                <span class="comm-avatar__initials">ST</span>
+              </div>
+              <div class="comm-card__info">
+                <h4 class="comm-name comm-name--md">Dr. Soumya Thomas</h4>
+                <p class="comm-role comm-role--accent">Principal in Charge</p>
+              </div>
+            </div>
+
+            <div class="comm-card comm-card--patron">
+              <div class="comm-avatar comm-avatar--md" aria-hidden="true">
+                <span class="comm-avatar__initials">JK</span>
+              </div>
+              <div class="comm-card__info">
+                <h4 class="comm-name comm-name--md">Prof. Dr. Johnson K. M</h4>
+                <p class="comm-role comm-role--accent">Academic Director</p>
+              </div>
+            </div>
+
+            <div class="comm-card comm-card--patron">
+              <div class="comm-avatar comm-avatar--md" aria-hidden="true">
+                <span class="comm-avatar__initials">BJ</span>
+              </div>
+              <div class="comm-card__info">
+                <h4 class="comm-name comm-name--md">Ms. Bini Rani Jose</h4>
+                <p class="comm-role comm-role--accent">Vice Principal</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tier 3: Coordinators -->
+        <div class="committee-tier committee-tier--coordinators">
+          <div class="comm-tier-header">
+            <h3 class="comm-tier-title">Coordinators</h3>
+            <div class="comm-tier-line" aria-hidden="true"></div>
+          </div>
+          <div class="comm-grid comm-grid--coordinators">
+
+            <!-- Highlighted Lead Coordinator -->
+            <div class="comm-card comm-card--coordinator comm-card--coordinator-lead">
+              <div class="comm-avatar comm-avatar--sm" aria-hidden="true">
+                <span class="comm-avatar__initials">JA</span>
+              </div>
+              <div class="comm-card__info">
+                <h4 class="comm-name comm-name--sm">Dr. John T Abraham</h4>
+                <span class="comm-role-tag">Dean &amp; HoD / Coordinator</span>
+                <p class="comm-inst">Department of Computer Science</p>
+              </div>
+            </div>
+
+            <div class="comm-card comm-card--coordinator">
+              <div class="comm-avatar comm-avatar--sm" aria-hidden="true">
+                <span class="comm-avatar__initials">AP</span>
+              </div>
+              <div class="comm-card__info">
+                <h4 class="comm-name comm-name--sm">Fr. Anish Paul</h4>
+                <span class="comm-role-tag">Co-Coordinator</span>
+                <p class="comm-inst">Bharata Mata College</p>
+              </div>
+            </div>
+
+            <div class="comm-card comm-card--coordinator">
+              <div class="comm-avatar comm-avatar--sm" aria-hidden="true">
+                <span class="comm-avatar__initials">DV</span>
+              </div>
+              <div class="comm-card__info">
+                <h4 class="comm-name comm-name--sm">Ms. Deepa V</h4>
+                <span class="comm-role-tag">Convenor</span>
+                <p class="comm-inst">Department of Malayalam</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tier 4: Organizing Members (Quietest) -->
+        <div class="committee-tier committee-tier--members">
+          <div class="comm-tier-header comm-tier-header--sm">
+            <h3 class="comm-tier-title comm-tier-title--sm">Organizing Members</h3>
+            <div class="comm-tier-line" aria-hidden="true"></div>
+          </div>
+          <ul class="comm-members-list">
+            <li class="comm-member-item">
+              <span class="comm-bullet" aria-hidden="true"></span>
+              <span class="comm-member-name">Dr. Thomas Varghese</span>
+            </li>
+            <li class="comm-member-item">
+              <span class="comm-bullet" aria-hidden="true"></span>
+              <span class="comm-member-name">Dr. Varghese Paul</span>
+            </li>
+            <li class="comm-member-item">
+              <span class="comm-bullet" aria-hidden="true"></span>
+              <span class="comm-member-name">Dr. Aleena K Noble</span>
+            </li>
+            <li class="comm-member-item">
+              <span class="comm-bullet" aria-hidden="true"></span>
+              <span class="comm-member-name">Mr. Harikrishnan P</span>
+            </li>
+            <li class="comm-member-item">
+              <span class="comm-bullet" aria-hidden="true"></span>
+              <span class="comm-member-name">Ms. Devika D</span>
+            </li>
+            <li class="comm-member-item">
+              <span class="comm-bullet" aria-hidden="true"></span>
+              <span class="comm-member-name">Ms. Alphonsa Sini</span>
+            </li>
+            <li class="comm-member-item">
+              <span class="comm-bullet" aria-hidden="true"></span>
+              <span class="comm-member-name">Ms. Binsha Benny</span>
+            </li>
+            <li class="comm-member-item">
+              <span class="comm-bullet" aria-hidden="true"></span>
+              <span class="comm-member-name">Ms. Anisha Poly</span>
+            </li>
+            <li class="comm-member-item">
+              <span class="comm-bullet" aria-hidden="true"></span>
+              <span class="comm-member-name">Ms. Greety Domanic</span>
+            </li>
+            <li class="comm-member-item">
+              <span class="comm-bullet" aria-hidden="true"></span>
+              <span class="comm-member-name">Ms. Samridha Puthiyil</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 13: ORGANIZING COMMITTEE <<<<< -->
+  <!-- ========================================================================== -->
+
+
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 14: CONTACT US & VENUE <<<<< -->
+  <!-- ========================================================================== -->
+  <section id="contact" class="section section--light contact-section">
+    <!-- Subtle Ambient Glow & Dot Grid -->
+    <div class="contact-grid-bg" aria-hidden="true"></div>
+    <div class="contact-ambient-glow" aria-hidden="true"></div>
+
+    <div class="container">
+
+      <!-- 1. Heading Area (Centered Heading & Underline) -->
+      <div class="contact-header-wrap">
+        <h2 class="section-heading contact-heading">Contact Us</h2>
+        <div class="contact-underline"></div>
+        <p class="contact-subtext">Reach out to our organizing team for conference inquiries, registration assistance,
+          and venue directions.</p>
+      </div>
+
+      <!-- 2. Single Unified Box -->
+      <div class="contact-unified-box">
+
+        <!-- LEFT SIDE: Venue & Compact Map -->
+        <div class="contact-box__venue">
+          <div class="venue-hero__header">
+            <span class="venue-hero__tag">
+              <svg class="venue-hero__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>CONFERENCE VENUE</span>
+            </span>
+            <h3 class="venue-hero__title">Bharata Mata College (Autonomous)</h3>
+            <p class="venue-hero__address">
+              Seaport - Airport Road, Thrikkakara,<br />
+              Kochi, Kerala, Pin: 682021
+            </p>
+          </div>
+
+          <!-- Compact Real Google Map Embed -->
+          <div class="venue-map-wrapper">
+            <iframe class="venue-map-iframe"
+              src="https://maps.google.com/maps?q=Bharata%20Mata%20College,%20Seaport%20-%20Airport%20Road,%20Thrikkakara,%20Kochi,%20Kerala%20682021&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Bharata Mata College Location Map">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE: 5 Compact Contact Lines (No Large Gap) -->
+        <div class="contact-box__people">
+          <div class="contact-lines-list">
+
+            <!-- Line 1: Dr. John T. Abraham -->
+            <div class="contact-line-item contact-card-animate" data-card-index="1">
+              <div class="contact-line-left">
+                <h4 class="contact-name">Dr. John T. Abraham</h4>
+                <span class="contact-designation">Coordinator</span>
+              </div>
+              <div class="contact-line-right">
+                <a href="tel:+919447116484" class="contact-link" aria-label="Call +91 94471 16484">
+                  <svg class="contact-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  <span>+91 94471 16484</span>
+                </a>
+                <a href="tel:+919447116484" class="circle-action-btn" title="Call Dr. John T. Abraham"
+                  aria-label="Call Dr. John T. Abraham">
+                  <span class="material-symbols-rounded" aria-hidden="true">call</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Line 2: Ms. Deepa V -->
+            <div class="contact-line-item contact-card-animate" data-card-index="2">
+              <div class="contact-line-left">
+                <h4 class="contact-name">Ms. Deepa V</h4>
+                <span class="contact-designation">Convenor</span>
+              </div>
+              <div class="contact-line-right">
+                <a href="tel:+918547230613" class="contact-link" aria-label="Call +91 85472 30613">
+                  <svg class="contact-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  <span>+91 85472 30613</span>
+                </a>
+                <a href="tel:+918547230613" class="circle-action-btn" title="Call Ms. Deepa V"
+                  aria-label="Call Ms. Deepa V">
+                  <span class="material-symbols-rounded" aria-hidden="true">call</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Line 3: Fr. Anish Paul -->
+            <div class="contact-line-item contact-card-animate" data-card-index="3">
+              <div class="contact-line-left">
+                <h4 class="contact-name">Fr. Anish Paul</h4>
+                <span class="contact-designation">Co-Coordinator</span>
+              </div>
+            </div>
+
+            <!-- Line 4: Email (BMC Conference Email) -->
+            <div class="contact-line-item contact-card-animate" data-card-index="4">
+              <div class="contact-line-left">
+                <h4 class="contact-name">Email</h4>
+                <span class="contact-designation">Conference Enquiries</span>
+              </div>
+              <div class="contact-line-right">
+                <a href="mailto:bmcvaani@gmail.com" class="contact-link" aria-label="Email bmcvaani@gmail.com">
+                  <svg class="contact-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                  <span>bmcvaani@gmail.com</span>
+                </a>
+                <a href="mailto:bmcvaani@gmail.com" class="circle-action-btn" title="Email bmcvaani@gmail.com"
+                  aria-label="Email bmcvaani@gmail.com">
+                  <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Line 5: BMC Website -->
+            <div class="contact-line-item contact-card-animate" data-card-index="5">
+              <div class="contact-line-left">
+                <h4 class="contact-name">BMC Website</h4>
+                <span class="contact-designation">Official Portal</span>
+              </div>
+              <div class="contact-line-right">
+                <a href="https://www.bharatamatacollege.in/" target="_blank" rel="noopener noreferrer"
+                  class="contact-link" aria-label="Visit bharatamatacollege.in">
+                  <svg class="contact-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                  </svg>
+                  <span>www.bharatamatacollege.in</span>
+                </a>
+                <a href="https://www.bharatamatacollege.in/" target="_blank" rel="noopener noreferrer"
+                  class="circle-action-btn circle-action-btn--site" title="Visit College Website"
+                  aria-label="Visit College Website">
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 14: CONTACT US & VENUE <<<<< -->
+  <!-- ========================================================================== -->
+
+
+
+  <!-- ========================================================================== -->
+  <!-- >>>>> START PART 15: FOOTER <<<<< -->
+  <!-- ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-top-grid">
+
+        <div class="footer-col footer-col--brand">
+          <div class="footer-logo-row">
+            <img src="assets/logos/bmc-brochure-logo.png" alt="BMC" class="footer-logo"
+              onerror="this.style.display='none';" />
+            <div>
+              <h4 class="footer-title">BHARATA MATA COLLEGE</h4>
+              <p class="footer-sub">Autonomous · Thrikkakara, Kochi-21</p>
+            </div>
+          </div>
+          <p class="footer-lead">
+            AI &amp; Data Science: Concepts, Skills &amp; Society
+          </p>
+          <p class="footer-text">
+            Conducted in Malayalam under the AICTE-VAANI Scheme. December 8–9, 2026.
+          </p>
+          <div class="footer-isbn-pill">
+            Proceedings ISBN: 978-81-985405-9-1
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-heading">Quick Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Conference</a></li>
+            <li><a href="#college">Host College</a></li>
+            <li><a href="#tracks">Tracks</a></li>
+            <li><a href="#speakers">Keynote Speakers</a></li>
+            <li><a href="#dates">Important Dates</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-heading">Registration &amp; Submissions</h5>
+          <ul class="footer-links">
+            <li><a href="https://atalacademy.aicte.gov.in/" target="_blank" rel="noopener noreferrer">AICTE ATAL Portal
+                (Free Reg)</a></li>
+            <li><a href="https://forms.gle/KteEkgCyCaEmKGit8" target="_blank" rel="noopener noreferrer">Paper Submission
+                Form</a></li>
+            <li><a href="https://www.bharatamatacollege.in/" target="_blank" rel="noopener noreferrer">Official College
+                Website</a></li>
+            <li><a href="mailto:bmcvaani@gmail.com">bmcvaani@gmail.com</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-heading">Under Scheme</h5>
+          <p class="footer-text">
+            <strong>AICTE-VAANI</strong><br />
+            (Vibrant Advocacy for Advancement and Nurturing of Indian Languages)
+          </p>
+          <p class="footer-text mt-10">
+            Jointly organized by the <strong>Department of Computer Science</strong> and the <strong>Department of
+              Malayalam</strong>.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 Bharata Mata College (Autonomous), Thrikkakara. All rights reserved.</p>
+        <p>National Conference on Artificial Intelligence: Concepts, Skills and Society</p>
+      </div>
+    </div>
+  </footer>
+  <!-- ========================================================================== -->
+  <!-- >>>>> END PART 15: FOOTER <<<<< -->
+  <!-- ========================================================================== -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
