@@ -80,12 +80,12 @@ Bmc/
 
 ## Deployment
 
-The website is a **static HTML/CSS/JS** site. Simply upload the entire `Bmc/` folder to any web host:
+The website is a **static HTML/CSS/JS** site. `index.html`, `style.css`, `script.js`, and `assets/` must sit at the **repository root**. GitHub Pages serves that root. A nested `Bmc/` folder makes Pages render this README instead of the site.
 
-- **GitHub Pages** — push the folder, enable Pages
-- **Netlify** — drag-and-drop the folder
+- **GitHub Pages** — push `main`, with Pages set to deploy from the root of `main`
+- **Netlify** — drag-and-drop this folder
 - **Firebase Hosting** — `firebase deploy`
-- **Traditional hosting** — FTP upload the folder
+- **Traditional hosting** — FTP upload this folder
 
 No build step or server required.
 
