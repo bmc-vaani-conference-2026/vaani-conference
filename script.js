@@ -343,9 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Animate digit change with flip class
     const setDigit = (el, value) => {
-      const padded = el === elDays
-        ? String(value).padStart(3, '0')
-        : String(value).padStart(2, '0');
+      const padded = String(value).padStart(2, '0');
 
       if (el.textContent === padded) return;
 
