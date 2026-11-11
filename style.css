@@ -1647,10 +1647,10 @@ kbd {
   position: relative;
   z-index: 2;
   width: 100%;
-  background-color: #040e1b;
+  background-color: var(--navy-primary);
   text-align: center;
   padding: 2.75rem 1.5rem;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .objectives-banner-heading,
