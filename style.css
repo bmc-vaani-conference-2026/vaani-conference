@@ -1930,15 +1930,20 @@ body.sidebar-locked {
 }
 
 .info-panel-body {
-  padding: 1.5rem 1.75rem;
+  padding: 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.35rem;
+  gap: 0;
 }
 
 .info-item {
-  padding-bottom: 1.25rem;
+  padding: 0.85rem 0;
   border-bottom: 1px solid var(--border-light);
+  margin: 0;
+}
+
+.info-item:first-child {
+  padding-top: 0;
 }
 
 .info-item:last-child {
@@ -1948,26 +1953,27 @@ body.sidebar-locked {
 
 .info-label {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--gold-primary);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.2rem;
 }
 
 .info-heading {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 700;
   color: var(--white);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
 }
 
 .info-text {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--text-body);
-  line-height: 1.55;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -1976,14 +1982,14 @@ body.sidebar-locked {
 }
 
 .info-item--footer {
-  padding-top: 0.25rem;
+  padding-top: 0.85rem;
 }
 
 .info-meta-row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.75rem;
-  padding-top: 0.25rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+  padding-top: 0.15rem;
 }
 
 .info-meta-val {
@@ -2008,17 +2014,22 @@ body.sidebar-locked {
 
 @media (max-width: 600px) {
   .info-meta-row {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
   }
 
   .about-key-points {
-    padding: 1.25rem;
+    padding: 1rem 1.15rem;
+    margin-top: 1.25rem;
   }
 
-  .info-panel-header,
+  .info-panel-header {
+    padding: 0.95rem 1.25rem 0.85rem;
+  }
+
   .info-panel-body {
-    padding: 1.25rem;
+    padding: 0.95rem 1.25rem;
+    gap: 0;
   }
 }
 
@@ -4501,7 +4512,7 @@ body.sidebar-locked {
   .college-grid,
   .participate-layout {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 1.85rem;
   }
 
   .participate-content-col,
@@ -5058,10 +5069,10 @@ body.sidebar-locked {
     font-weight: 600;
   }
 
-  /* About & College Sections — Full Width Single Columns */
+  /* About & College Sections — Compact Clean Mobile Layout */
   .about-grid,
   .college-grid {
-    gap: 1.6rem;
+    gap: 1.25rem;
     width: 100%;
     box-sizing: border-box;
   }
@@ -5073,25 +5084,35 @@ body.sidebar-locked {
   }
 
   .about-text p,
-  .college-text p {
-    font-size: 0.82rem;
-    line-height: 1.58;
+  .college-text p,
+  .about-narrative p {
+    font-size: 0.84rem;
+    line-height: 1.55;
+    margin-bottom: 0.85rem;
   }
 
   .about-key-points {
-    padding: 0.85rem;
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
     width: 100%;
     box-sizing: border-box;
   }
 
-  .key-point-item {
-    font-size: 0.78rem;
-    gap: 0.5rem;
+  .about-points-title {
+    font-size: 0.88rem;
+    margin-bottom: 0.65rem;
+    padding-bottom: 0.35rem;
   }
 
-  .info-meta-row {
-    grid-template-columns: 1fr;
-    gap: 0.6rem;
+  .about-points-list {
+    gap: 0.65rem;
+  }
+
+  .key-point-item,
+  .about-points-list li {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    gap: 0.5rem;
   }
 
   .about-sidebar {
@@ -5104,28 +5125,48 @@ body.sidebar-locked {
     box-sizing: border-box;
   }
 
-  .info-panel-header,
-  .info-panel-body {
-    padding: 0.85rem;
+  .info-panel-header {
+    padding: 0.85rem 1rem 0.75rem;
     box-sizing: border-box;
   }
 
   .info-panel-title {
     font-size: 0.95rem;
+    margin-bottom: 0.15rem;
   }
 
   .info-panel-subtitle {
     font-size: 0.68rem;
   }
 
+  .info-panel-body {
+    padding: 0.85rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    box-sizing: border-box;
+  }
+
   .info-item {
-    margin-bottom: 0.85rem;
+    padding: 0.6rem 0;
+    margin: 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .info-item:first-child {
+    padding-top: 0;
+  }
+
+  .info-item:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
   }
 
   .info-label {
-    font-size: 0.62rem;
+    font-size: 0.64rem;
     letter-spacing: 0.06em;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.15rem;
   }
 
   .info-heading {
@@ -5135,28 +5176,50 @@ body.sidebar-locked {
   }
 
   .info-text {
-    font-size: 0.76rem;
-    line-height: 1.48;
+    font-size: 0.78rem;
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  .info-item--footer {
+    padding-top: 0.6rem;
+  }
+
+  .info-meta-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.45rem;
+    padding-top: 0.15rem;
+  }
+
+  .info-meta-row > div {
+    min-width: 0;
   }
 
   .info-meta-val {
-    font-size: 0.76rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 0.1rem;
   }
 
   .college-meta-grid {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+    margin: 1.15rem 0 1.25rem;
+    padding: 0.85rem 1rem;
     width: 100%;
     box-sizing: border-box;
   }
 
   .college-meta-item {
-    padding: 0.65rem 0.8rem;
+    padding: 0.5rem 0.65rem;
     box-sizing: border-box;
   }
 
   .college-meta-label {
     font-size: 0.65rem;
+    margin-bottom: 0.15rem;
   }
 
   .college-meta-val {
@@ -5691,6 +5754,14 @@ body.sidebar-locked {
     padding-right: var(--mobile-gutter, 1.15rem);
   }
 
+  .section {
+    padding: 2rem 0;
+  }
+
+  .section-title-wrap {
+    margin-bottom: 1.25rem;
+  }
+
   .top-bar__container {
     padding: 0.4rem 0.65rem;
     gap: 0.45rem;
@@ -5841,17 +5912,40 @@ body.sidebar-locked {
     font-size: 0.86rem;
   }
 
+  .info-panel-body {
+    padding: 0.75rem 0.85rem;
+    gap: 0;
+  }
+
+  .info-item {
+    padding: 0.5rem 0;
+  }
+
   .info-label {
     font-size: 0.58rem;
+    margin-bottom: 0.1rem;
   }
 
   .info-heading {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
+    margin-bottom: 0.15rem;
   }
 
   .info-text {
+    font-size: 0.74rem;
+    line-height: 1.4;
+  }
+
+  .info-item--footer {
+    padding-top: 0.5rem;
+  }
+
+  .info-meta-row {
+    gap: 0.35rem;
+  }
+
+  .info-meta-val {
     font-size: 0.72rem;
-    line-height: 1.42;
   }
 
   .date-group__num {
