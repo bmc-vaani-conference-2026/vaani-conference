@@ -937,84 +937,29 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ========================================================================== */
 
   /* ========================================================================== */
-  /* >>>>> START SCRIPT PART 06: CALENDAR COUNTDOWN TIMER WITH 3D PAGE FLIP <<<<< */
+  /* >>>>> START SCRIPT PART 06: MODERN GLASS COUNTDOWN TIMER <<<<< */
   /* ========================================================================== */
   (() => {
     // Target: December 8, 2026 at 09:30:00 IST (UTC+5:30)
     const TARGET = new Date('2026-12-08T09:30:00+05:30').getTime();
 
-    const cardDays    = document.getElementById('cal-card-days');
-    const cardHours   = document.getElementById('cal-card-hours');
-    const cardMinutes = document.getElementById('cal-card-minutes');
-    const cardSeconds = document.getElementById('cal-card-seconds');
+    const elDays    = document.getElementById('cd-days');
+    const elHours   = document.getElementById('cd-hours');
+    const elMinutes = document.getElementById('cd-minutes');
+    const elSeconds = document.getElementById('cd-seconds');
 
-    if (!cardDays || !cardHours || !cardMinutes || !cardSeconds) return;
+    if (!elDays || !elHours || !elMinutes || !elSeconds) return;
 
-    // Flip-turn animation function
-    const updateCard = (card, value, isInitial) => {
-      const padded = String(value).padStart(2, '0');
-      const page   = card.querySelector('.cal-page');
-      const topEl  = card.querySelector('.cal-half--top .cal-digit');
-      const botEl  = card.querySelector('.cal-half--bottom .cal-digit');
-
-      if (!page || !topEl || !botEl) return;
-
-      const currentVal = topEl.textContent.trim();
-
-      // On initial setup, populate both static leaves directly without animation
-      if (isInitial || !currentVal) {
-        topEl.textContent = padded;
-        botEl.textContent = padded;
-        return;
-      }
-
-      // No change needed
-      if (currentVal === padded) return;
-
-      // Clean up any in-flight flap before creating a new one
-      const existingFlap = page.querySelector('.cal-flap');
-      if (existingFlap) {
-        botEl.textContent = existingFlap.dataset.nextVal || padded;
-        existingFlap.remove();
-      }
-
-      // 1. Static upper half updates to the NEW value (hidden behind flap at first)
-      topEl.textContent = padded;
-
-      // 2. Create the 3D flipping leaf that turns over
-      const flap = document.createElement('div');
-      flap.className = 'cal-flap';
-      flap.dataset.nextVal = padded;
-      flap.innerHTML = `
-        <div class="cal-flap__face cal-flap__face--front">
-          <div class="cal-digit-wrap">
-            <span class="cal-digit">${currentVal}</span>
-          </div>
-          <div class="cal-shadow cal-shadow--front"></div>
-        </div>
-        <div class="cal-flap__face cal-flap__face--back">
-          <div class="cal-digit-wrap">
-            <span class="cal-digit">${padded}</span>
-          </div>
-          <div class="cal-shadow cal-shadow--back"></div>
-        </div>
-      `;
-
-      page.appendChild(flap);
-
-      // 3. When page finishes turning over (550ms), update bottom static half & clean up
-      let finished = false;
-      const finish = () => {
-        if (finished) return;
-        finished = true;
-        botEl.textContent = padded;
-        if (flap.parentNode === page) {
-          page.removeChild(flap);
+    const setVal = (el, val, isInitial) => {
+      const padded = String(Math.max(0, val)).padStart(2, '0');
+      if (el.textContent !== padded) {
+        el.textContent = padded;
+        if (!isInitial) {
+          el.classList.remove('cd-digit--tick');
+          void el.offsetWidth; // trigger reflow
+          el.classList.add('cd-digit--tick');
         }
-      };
-
-      flap.addEventListener('animationend', finish, { once: true });
-      setTimeout(finish, 600); // Safety fallback for throttled tabs
+      }
     };
 
     let isInitialTick = true;
@@ -1024,11 +969,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const diff = TARGET - now;
 
       if (diff <= 0) {
-        // Conference has started
-        updateCard(cardDays,    0, isInitialTick);
-        updateCard(cardHours,   0, isInitialTick);
-        updateCard(cardMinutes, 0, isInitialTick);
-        updateCard(cardSeconds, 0, isInitialTick);
+        setVal(elDays,    0, isInitialTick);
+        setVal(elHours,   0, isInitialTick);
+        setVal(elMinutes, 0, isInitialTick);
+        setVal(elSeconds, 0, isInitialTick);
         clearInterval(timerInterval);
         return;
       }
@@ -1039,10 +983,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const minutes = Math.floor((totalSeconds % 3600)  / 60);
       const seconds = totalSeconds % 60;
 
-      updateCard(cardDays,    days,    isInitialTick);
-      updateCard(cardHours,   hours,   isInitialTick);
-      updateCard(cardMinutes, minutes, isInitialTick);
-      updateCard(cardSeconds, seconds, isInitialTick);
+      setVal(elDays,    days,    isInitialTick);
+      setVal(elHours,   hours,   isInitialTick);
+      setVal(elMinutes, minutes, isInitialTick);
+      setVal(elSeconds, seconds, isInitialTick);
 
       isInitialTick = false;
     };
@@ -1051,7 +995,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const timerInterval = setInterval(tick, 1000);
   })();
   /* ========================================================================== */
-  /* >>>>> END SCRIPT PART 06: COUNTDOWN TIMER TO DEC 8 2026 09:30 IST <<<<< */
+  /* >>>>> END SCRIPT PART 06: MODERN GLASS COUNTDOWN TIMER <<<<< */
   /* ========================================================================== */
 
   /* ========================================================================== */
