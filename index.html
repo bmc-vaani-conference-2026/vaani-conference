@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ml">
 <!-- ========================================================================== -->
 <!-- >>>>> START PART 00: DOCUMENT HEAD & METADATA <<<<< -->
 <!-- ========================================================================== -->
@@ -8,22 +8,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="AI & Data Science: Concepts, Skills & Society — A two-day national conference conducted in Malayalam under the AICTE-VAANI Scheme. December 8–9, 2026 at Bharata Mata College (Autonomous), Thrikkakara, Kochi, Kerala." />
+    content="എ ഐ & ഡാറ്റാ സയൻസ്: സങ്കല്പനം, സാങ്കേതികത, സമൂഹം — ഭാരത മാതാ കോളേജ് (ഓട്ടോണമസ്), തൃക്കാക്കര സംഘടിപ്പിക്കുന്ന ദ്വിദിന ദേശീയ കോൺഫറൻസ്. 2026 ഡിസംബർ 8-9." />
   <meta name="keywords"
-    content="AI, Data Science, Concepts Skills and Society, Malayalam AI Conference, AICTE VAANI, Bharata Mata College, Thrikkakara, Kochi" />
-  <title>AI &amp; Data Science: Concepts, Skills &amp; Society | Bharata Mata College</title>
+    content="AI, Data Science, Concepts Skills and Society, Malayalam AI Conference, AICTE VAANI, Bharata Mata College, Thrikkakara, Kochi, ഭാരത മാതാ കോളേജ്, മലയാളം എഐ കോൺഫറൻസ്" />
+  <title>എ ഐ &amp; ഡാറ്റാ സയൻസ്: സങ്കല്പനം, സാങ്കേതികത, സമൂഹം | ഭാരത മാതാ കോളേജ്</title>
 
   <!-- Open Graph -->
-  <meta property="og:title" content="AI & Data Science: Concepts, Skills & Society" />
+  <meta property="og:title" content="എ ഐ & ഡാറ്റാ സയൻസ്: സങ്കല്പനം, സാങ്കേതികത, സമൂഹം" />
   <meta property="og:description"
-    content="Two-day conference in Malayalam under the AICTE-VAANI Scheme. Dec 8-9, 2026 at Bharata Mata College, Kochi." />
+    content="AICTE – ATAL ധനസഹായത്തോടെ സംഘടിപ്പിക്കുന്ന ദ്വിദിന ദേശീയ കോൺഫറൻസ്. ഡിസംബർ 8-9, 2026 | ഭാരത മാതാ കോളേജ്, തൃക്കാക്കര." />
   <meta property="og:type" content="website" />
 
-  <!-- Fonts: Garet (local) + Plus Jakarta Sans & Space Grotesk fallback + Google Material Symbols -->
+  <!-- Fonts: Noto Sans Malayalam + Plus Jakarta Sans & Space Grotesk fallback + Google Material Symbols -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -41,7 +41,15 @@
   <header class="top-bar" id="topBar">
     <div class="top-bar__container">
 
-      <!-- 3 Logos Group (Left side of Navbar) -->
+      <!-- Mobile Hamburger Button (Left side of Navbar on Mobile) -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu" aria-expanded="false"
+        aria-controls="mobileSidebar">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- 3 Logos Group -->
       <div class="header-logos-group">
         <!-- College Logo Banner (Left) -->
         <div class="header-logo-item header-logo-item--bmc">
@@ -60,23 +68,107 @@
         </div>
       </div>
 
-      <!-- 3 Action Buttons (Right side of Navbar) with Golden Sliding Hover Animation -->
-      <div class="header-actions-group">
-        <a href="https://atalacademy.aicte.gov.in/" target="_blank" rel="noopener noreferrer" class="nav-gold-btn">
-          <span>Register</span>
-        </a>
-        <a href="https://forms.gle/KteEkgCyCaEmKGit8" target="_blank" rel="noopener noreferrer" class="nav-gold-btn">
-          <span>Submit Paper</span>
-        </a>
-        <a href="#contact" class="nav-gold-btn">
-          <span>Contact</span>
-        </a>
+      <!-- Right Controls Group (Action Buttons + Language Switcher Toggle) -->
+      <div class="header-right-group">
+        <!-- 3 Action Buttons (Desktop, hidden on Mobile) -->
+        <div class="header-actions-group">
+          <a href="https://atalacademy.aicte.gov.in/" target="_blank" rel="noopener noreferrer" class="nav-gold-btn">
+            <span data-i18n="nav_register">രജിസ്ട്രേഷൻ</span>
+          </a>
+          <a href="https://forms.gle/KteEkgCyCaEmKGit8" target="_blank" rel="noopener noreferrer" class="nav-gold-btn">
+            <span data-i18n="nav_submit">പ്രബന്ധം സമർപ്പിക്കുക</span>
+          </a>
+          <a href="#contact" class="nav-gold-btn">
+            <span data-i18n="nav_contact">ബന്ധപ്പെടുക</span>
+          </a>
+        </div>
+
+        <!-- Top Bar Language Toggle Button -->
+        <button type="button" class="lang-toggle-btn" id="langToggleBtn" aria-label="Switch Language" title="Switch Language">
+          <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-toggle-text" id="langToggleText">english</span>
+        </button>
       </div>
 
     </div>
     <!-- Bold Gold Accent Bar -->
     <div class="gold-accent-stripe" aria-hidden="true"></div>
   </header>
+
+  <!-- Mobile Sidebar Drawer & Backdrop -->
+  <div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+  <aside class="mobile-sidebar" id="mobileSidebar" aria-label="Mobile Navigation Menu" aria-hidden="true">
+    <div class="sidebar-header">
+      <div class="sidebar-brand">
+        <img src="assets/logos/college-logo.png" alt="BMC Logo" class="sidebar-logo"
+          onerror="this.style.display='none';" />
+        <div class="sidebar-brand-text">
+          <span class="sidebar-title" data-i18n="sidebar_title">ഭാരത മാതാ കോളേജ്</span>
+          <span class="sidebar-subtitle" data-i18n="sidebar_subtitle">AICTE-വാണി കോൺഫറൻസ്</span>
+        </div>
+      </div>
+      <button class="sidebar-close-btn" id="sidebarCloseBtn" aria-label="Close Navigation Menu">
+        <span class="material-symbols-rounded">close</span>
+      </button>
+    </div>
+
+    <div class="sidebar-content">
+      <!-- Language Switcher in Mobile Drawer -->
+      <div class="sidebar-lang-box">
+        <span class="sidebar-lang-label" data-i18n="sidebar_lang_label">ഭാഷ / Language:</span>
+        <button type="button" class="sidebar-lang-btn" id="sidebarLangToggleBtn">
+          <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="sidebar-lang-toggle-text" id="sidebarLangToggleText">english</span>
+        </button>
+      </div>
+
+      <!-- Action Buttons in Sidebar -->
+      <div class="sidebar-actions-group">
+        <a href="https://atalacademy.aicte.gov.in/" target="_blank" rel="noopener noreferrer"
+          class="sidebar-btn sidebar-btn--register">
+          <span class="material-symbols-rounded">app_registration</span>
+          <span data-i18n="sidebar_btn_register">രജിസ്റ്റർ ചെയ്യുക (ATAL പോർട്ടൽ)</span>
+        </a>
+        <a href="https://forms.gle/KteEkgCyCaEmKGit8" target="_blank" rel="noopener noreferrer"
+          class="sidebar-btn sidebar-btn--submit">
+          <span class="material-symbols-rounded">description</span>
+          <span data-i18n="sidebar_btn_submit">പ്രബന്ധം സമർപ്പിക്കുക</span>
+        </a>
+        <a href="#contact" class="sidebar-btn sidebar-btn--contact">
+          <span class="material-symbols-rounded">mail</span>
+          <span data-i18n="sidebar_btn_contact">സ്ഥലവും വിവരങ്ങളും</span>
+        </a>
+      </div>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- Quick Navigation Links -->
+      <nav class="sidebar-nav">
+        <span class="sidebar-nav-heading" data-i18n="sidebar_nav_heading">നാവിഗേഷൻ</span>
+        <ul class="sidebar-nav-list">
+          <li><a href="#home" class="sidebar-link"><span class="material-symbols-rounded">home</span><span data-i18n="sidebar_nav_home">ഹോം</span></a></li>
+          <li><a href="#about" class="sidebar-link"><span class="material-symbols-rounded">info</span><span data-i18n="sidebar_nav_about">കോൺഫറൻസിനെക്കുറിച്ച്</span></a></li>
+          <li><a href="#countdown" class="sidebar-link"><span class="material-symbols-rounded">timer</span><span data-i18n="sidebar_nav_countdown">കൗണ്ട്ഡൗൺ</span></a></li>
+          <li><a href="#college" class="sidebar-link"><span class="material-symbols-rounded">school</span><span data-i18n="sidebar_nav_college">ഭാരത മാതാ കോളേജ്</span></a></li>
+          <li><a href="#tracks" class="sidebar-link"><span class="material-symbols-rounded">layers</span><span data-i18n="sidebar_nav_tracks">വിഷയമേഖലകൾ</span></a></li>
+          <li><a href="#dates" class="sidebar-link"><span class="material-symbols-rounded">event</span><span data-i18n="sidebar_nav_dates">പ്രധാന തീയതികൾ</span></a></li>
+          <li><a href="#papers" class="sidebar-link"><span class="material-symbols-rounded">menu_book</span><span data-i18n="sidebar_nav_papers">പ്രബന്ധങ്ങൾ ക്ഷണിക്കുന്നു</span></a></li>
+          <li><a href="#speakers" class="sidebar-link"><span class="material-symbols-rounded">record_voice_over</span><span data-i18n="sidebar_nav_speakers">പ്രധാന പ്രഭാഷകർ</span></a></li>
+          <li><a href="#registration" class="sidebar-link"><span class="material-symbols-rounded">how_to_reg</span><span data-i18n="sidebar_nav_registration">രജിസ്ട്രേഷൻ</span></a></li>
+          <li><a href="#contact" class="sidebar-link"><span class="material-symbols-rounded">location_on</span><span data-i18n="sidebar_nav_contact">വേദിയും സംഘാടകരും</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
   <!-- ========================================================================== -->
   <!-- >>>>> END PART 01: TOP NAVIGATION BAR & ACTION BUTTONS <<<<< -->
   <!-- ========================================================================== -->
@@ -99,38 +191,38 @@
     <div class="hero__container">
       <div class="hero__content-col">
 
-        <p class="hero__scheme-title">AICTE-VAANI SCHEME &bull; TWO-DAY NATIONAL CONFERENCE</p>
+        <p class="hero__scheme-title" data-i18n="hero_scheme_title">AICTE – ATAL- ധനസഹായത്തോടെ സംഘടിപ്പിക്കുന്ന ദേശീയ കോൺഫറൻസ്</p>
 
         <div class="hero__title-lockup">
           <div class="hero__date-badge" aria-label="Conference dates: December 8-9, 2026">
             <div class="date-badge__inner">
-              <span class="date-badge__month">DEC</span>
-              <span class="date-badge__days">8-9</span>
-              <span class="date-badge__year">2026</span>
+              <span class="date-badge__month" data-i18n="hero_date_month">ഡിസം</span>
+              <span class="date-badge__days" data-i18n="hero_date_days">8-9</span>
+              <span class="date-badge__year" data-i18n="hero_date_year">2026</span>
             </div>
           </div>
 
           <div class="hero__headline-box">
-            <span class="hero__overline">AI &amp; DATA SCIENCE</span>
-            <h1 class="hero__title">
-              Concepts, Skills<br />
-              &amp; Society
+            <span class="hero__overline" data-i18n="hero_overline">ദേശീയ കോൺഫറൻസ്</span>
+            <h1 class="hero__title" data-i18n="hero_title">
+              എ ഐ &amp; ഡാറ്റാ സയൻസ്:<br />
+              സങ്കല്പനം, സാങ്കേതികത, സമൂഹം
             </h1>
           </div>
         </div>
 
-        <div class="hero__medium-pill">
-          <span>Conference Medium: <strong>Malayalam</strong></span>
+        <div class="hero__medium-pill" data-i18n="hero_medium_pill">
+          <span>കോൺഫറൻസ് മാധ്യമം: <strong>മലയാളം</strong></span>
         </div>
 
         <div class="hero__org-card">
-          <span class="org-card__label">ORGANISED BY</span>
-          <h2 class="org-card__depts">
-            Department of Computer Science &amp;<br />
-            Department of Malayalam
+          <span class="org-card__label" data-i18n="hero_org_label">സംയുക്തമായി സംഘടിപ്പിക്കുന്നത്</span>
+          <h2 class="org-card__depts" data-i18n="hero_org_depts">
+            കമ്പ്യൂട്ടർ സയൻസ് വിഭാഗവും<br />
+            മലയാളവിഭാഗവും
           </h2>
-          <p class="org-card__institution">
-            Bharata Mata College (Autonomous), Thrikkakara, Kochi-21, Kerala
+          <p class="org-card__institution" data-i18n="hero_org_institution">
+            ഭാരത മാതാ കോളേജ് (ഓട്ടോണമസ്), തൃക്കാക്കര, കൊച്ചി-21
           </p>
         </div>
 
@@ -145,16 +237,12 @@
 
 
   <!-- ========================================================================== -->
-  <!-- >>>>> START PART 02B: COUNTDOWN TIMER <<<<< -->
+  <!-- >>>>> START PART 02B: COUNTDOWN TIMER (CALENDAR FLIP) <<<<< -->
   <!-- ========================================================================== -->
   <section id="countdown" class="cd-section" aria-label="Conference Countdown">
 
-    <!-- Animated grid background -->
+    <!-- Subtle dot pattern background without glowing drift -->
     <div class="cd-grid-bg" aria-hidden="true"></div>
-
-    <!-- Ambient corner glows -->
-    <div class="cd-glow cd-glow--left"  aria-hidden="true"></div>
-    <div class="cd-glow cd-glow--right" aria-hidden="true"></div>
 
     <div class="container">
       <div class="cd-inner">
@@ -163,7 +251,7 @@
         <div class="cd-header">
           <div class="cd-eyebrow">
             <div class="cd-eyebrow__line"></div>
-            <span class="cd-eyebrow__text">CONFERENCE BEGINS IN</span>
+            <span class="cd-eyebrow__text" data-i18n="cd_eyebrow">കോൺഫറൻസ് ആരംഭിക്കാൻ ഇനി</span>
             <div class="cd-eyebrow__line"></div>
           </div>
         </div>
@@ -173,83 +261,202 @@
 
           <!-- DAYS -->
           <div class="cd-unit">
-            <div class="cd-box">
-              <div class="cd-box__inner">
-                <div class="cd-box__scanline" aria-hidden="true"></div>
-                <div class="cd-box__divider" aria-hidden="true"></div>
-                <span class="cd-digits" id="cd-days">00</span>
+            <div class="cal-card" id="cal-card-days" data-unit="days">
+              <div class="cal-stack-layer cal-stack-layer--2" aria-hidden="true"></div>
+              <div class="cal-stack-layer cal-stack-layer--1" aria-hidden="true"></div>
+
+              <!-- Binder Rings -->
+              <div class="cal-rings" aria-hidden="true">
+                <div class="cal-ring">
+                  <span class="cal-ring__loop"></span>
+                  <span class="cal-ring__hole"></span>
+                </div>
+                <div class="cal-ring">
+                  <span class="cal-ring__loop"></span>
+                  <span class="cal-ring__hole"></span>
+                </div>
+              </div>
+
+              <!-- Header Strip -->
+              <div class="cal-header">
+                <span class="cal-header__label" data-i18n="cd_days">ദിനങ്ങൾ</span>
+              </div>
+
+              <!-- Calendar Page with 3D Flip -->
+              <div class="cal-page">
+                <div class="cal-half cal-half--top">
+                  <div class="cal-digit-wrap">
+                    <span class="cal-digit" id="cd-days">00</span>
+                  </div>
+                </div>
+                <div class="cal-half cal-half--bottom">
+                  <div class="cal-digit-wrap">
+                    <span class="cal-digit">00</span>
+                  </div>
+                </div>
+                <div class="cal-fold-line" aria-hidden="true"></div>
+                <div class="cal-notch cal-notch--left" aria-hidden="true"></div>
+                <div class="cal-notch cal-notch--right" aria-hidden="true"></div>
               </div>
             </div>
-            <span class="cd-label">DAYS</span>
           </div>
 
           <!-- Colon separator -->
-          <div class="cd-sep" aria-hidden="true">
-            <span class="cd-sep__dot"></span>
-            <span class="cd-sep__dot"></span>
+          <div class="cal-sep" aria-hidden="true">
+            <span class="cal-sep__dot"></span>
+            <span class="cal-sep__dot"></span>
           </div>
 
           <!-- HOURS -->
           <div class="cd-unit">
-            <div class="cd-box">
-              <div class="cd-box__inner">
-                <div class="cd-box__scanline" aria-hidden="true"></div>
-                <div class="cd-box__divider" aria-hidden="true"></div>
-                <span class="cd-digits" id="cd-hours">00</span>
+            <div class="cal-card" id="cal-card-hours" data-unit="hours">
+              <div class="cal-stack-layer cal-stack-layer--2" aria-hidden="true"></div>
+              <div class="cal-stack-layer cal-stack-layer--1" aria-hidden="true"></div>
+
+              <!-- Binder Rings -->
+              <div class="cal-rings" aria-hidden="true">
+                <div class="cal-ring">
+                  <span class="cal-ring__loop"></span>
+                  <span class="cal-ring__hole"></span>
+                </div>
+                <div class="cal-ring">
+                  <span class="cal-ring__loop"></span>
+                  <span class="cal-ring__hole"></span>
+                </div>
+              </div>
+
+              <!-- Header Strip -->
+              <div class="cal-header">
+                <span class="cal-header__label" data-i18n="cd_hours">മണിക്കൂറുകൾ</span>
+              </div>
+
+              <!-- Calendar Page with 3D Flip -->
+              <div class="cal-page">
+                <div class="cal-half cal-half--top">
+                  <div class="cal-digit-wrap">
+                    <span class="cal-digit" id="cd-hours">00</span>
+                  </div>
+                </div>
+                <div class="cal-half cal-half--bottom">
+                  <div class="cal-digit-wrap">
+                    <span class="cal-digit">00</span>
+                  </div>
+                </div>
+                <div class="cal-fold-line" aria-hidden="true"></div>
+                <div class="cal-notch cal-notch--left" aria-hidden="true"></div>
+                <div class="cal-notch cal-notch--right" aria-hidden="true"></div>
               </div>
             </div>
-            <span class="cd-label">HOURS</span>
           </div>
 
           <!-- Colon separator -->
-          <div class="cd-sep" aria-hidden="true">
-            <span class="cd-sep__dot"></span>
-            <span class="cd-sep__dot"></span>
+          <div class="cal-sep" aria-hidden="true">
+            <span class="cal-sep__dot"></span>
+            <span class="cal-sep__dot"></span>
           </div>
 
           <!-- MINUTES -->
           <div class="cd-unit">
-            <div class="cd-box">
-              <div class="cd-box__inner">
-                <div class="cd-box__scanline" aria-hidden="true"></div>
-                <div class="cd-box__divider" aria-hidden="true"></div>
-                <span class="cd-digits" id="cd-minutes">00</span>
+            <div class="cal-card" id="cal-card-minutes" data-unit="minutes">
+              <div class="cal-stack-layer cal-stack-layer--2" aria-hidden="true"></div>
+              <div class="cal-stack-layer cal-stack-layer--1" aria-hidden="true"></div>
+
+              <!-- Binder Rings -->
+              <div class="cal-rings" aria-hidden="true">
+                <div class="cal-ring">
+                  <span class="cal-ring__loop"></span>
+                  <span class="cal-ring__hole"></span>
+                </div>
+                <div class="cal-ring">
+                  <span class="cal-ring__loop"></span>
+                  <span class="cal-ring__hole"></span>
+                </div>
+              </div>
+
+              <!-- Header Strip -->
+              <div class="cal-header">
+                <span class="cal-header__label" data-i18n="cd_minutes">മിനിറ്റുകൾ</span>
+              </div>
+
+              <!-- Calendar Page with 3D Flip -->
+              <div class="cal-page">
+                <div class="cal-half cal-half--top">
+                  <div class="cal-digit-wrap">
+                    <span class="cal-digit" id="cd-minutes">00</span>
+                  </div>
+                </div>
+                <div class="cal-half cal-half--bottom">
+                  <div class="cal-digit-wrap">
+                    <span class="cal-digit">00</span>
+                  </div>
+                </div>
+                <div class="cal-fold-line" aria-hidden="true"></div>
+                <div class="cal-notch cal-notch--left" aria-hidden="true"></div>
+                <div class="cal-notch cal-notch--right" aria-hidden="true"></div>
               </div>
             </div>
-            <span class="cd-label">MINUTES</span>
           </div>
 
           <!-- Colon separator -->
-          <div class="cd-sep" aria-hidden="true">
-            <span class="cd-sep__dot"></span>
-            <span class="cd-sep__dot"></span>
+          <div class="cal-sep" aria-hidden="true">
+            <span class="cal-sep__dot"></span>
+            <span class="cal-sep__dot"></span>
           </div>
 
           <!-- SECONDS -->
           <div class="cd-unit">
-            <div class="cd-box">
-              <div class="cd-box__inner">
-                <div class="cd-box__scanline" aria-hidden="true"></div>
-                <div class="cd-box__divider" aria-hidden="true"></div>
-                <span class="cd-digits" id="cd-seconds">00</span>
+            <div class="cal-card" id="cal-card-seconds" data-unit="seconds">
+              <div class="cal-stack-layer cal-stack-layer--2" aria-hidden="true"></div>
+              <div class="cal-stack-layer cal-stack-layer--1" aria-hidden="true"></div>
+
+              <!-- Binder Rings -->
+              <div class="cal-rings" aria-hidden="true">
+                <div class="cal-ring">
+                  <span class="cal-ring__loop"></span>
+                  <span class="cal-ring__hole"></span>
+                </div>
+                <div class="cal-ring">
+                  <span class="cal-ring__loop"></span>
+                  <span class="cal-ring__hole"></span>
+                </div>
+              </div>
+
+              <!-- Header Strip -->
+              <div class="cal-header">
+                <span class="cal-header__label" data-i18n="cd_seconds">സെക്കൻഡുകൾ</span>
+              </div>
+
+              <!-- Calendar Page with 3D Flip -->
+              <div class="cal-page">
+                <div class="cal-half cal-half--top">
+                  <div class="cal-digit-wrap">
+                    <span class="cal-digit" id="cd-seconds">00</span>
+                  </div>
+                </div>
+                <div class="cal-half cal-half--bottom">
+                  <div class="cal-digit-wrap">
+                    <span class="cal-digit">00</span>
+                  </div>
+                </div>
+                <div class="cal-fold-line" aria-hidden="true"></div>
+                <div class="cal-notch cal-notch--left" aria-hidden="true"></div>
+                <div class="cal-notch cal-notch--right" aria-hidden="true"></div>
               </div>
             </div>
-            <span class="cd-label">SECONDS</span>
           </div>
 
         </div>
 
-        <!-- Bottom info strip -->
-        <div class="cd-info-strip">
-          <div class="cd-info-strip__line"></div>
-          <div class="cd-info-strip__content">
-            <span class="cd-info-item">December 8 &ndash; 9, 2026</span>
-            <span class="cd-info-dot" aria-hidden="true"></span>
-            <span class="cd-info-item">9:30 AM IST</span>
-            <span class="cd-info-dot" aria-hidden="true"></span>
-            <span class="cd-info-item">Bharata Mata College, Thrikkakara, Kochi</span>
+        <!-- Enlarged & Highlighted Conference Date -->
+        <div class="cd-date-highlight" aria-label="Conference Date">
+          <div class="cd-date-highlight__line" aria-hidden="true"></div>
+          <div class="cd-date-badge">
+            <span class="material-symbols-rounded cd-date-icon" aria-hidden="true">calendar_month</span>
+            <span class="cd-date-main" data-i18n="cd_date_main">ഡിസംബർ 8 &ndash; 9, 2026</span>
+            <span class="cd-date-dot" aria-hidden="true">&bull;</span>
+            <span class="cd-date-time" data-i18n="cd_date_time">രാവിലെ 9:30 IST</span>
           </div>
-          <div class="cd-info-strip__line"></div>
+          <div class="cd-date-highlight__line" aria-hidden="true"></div>
         </div>
 
       </div>
@@ -267,46 +474,39 @@
   <section id="about" class="section section--light">
     <div class="container">
       <div class="section-title-wrap">
-        <h2 class="section-heading">About the Conference</h2>
+        <h2 class="section-heading" data-i18n="about_heading">ദേശീയ കോൺഫറൻസിനെക്കുറിച്ച്…</h2>
         <div class="title-underline"></div>
-        <p class="section-caption">AICTE-VAANI Sponsored Two-Day National Conference on Artificial Intelligence and Data Science</p>
+        <p class="section-caption" data-i18n="about_caption">AICTE-VAANI പദ്ധതിയുടെ കീഴിൽ സംഘടിപ്പിക്കുന്ന ദ്വിദിന ദേശീയ കോൺഫറൻസ്</p>
       </div>
 
       <div class="about-grid">
         <!-- Narrative Column -->
         <div class="about-narrative">
-          <p class="lead-paragraph">
-            Artificial Intelligence and Data Science are rapidly transforming various sectors, including education,
-            healthcare, agriculture, governance, and industry.
+          <p class="lead-paragraph" data-i18n="about_lead">
+            വിദ്യാഭ്യാസം, ആരോഗ്യസംരക്ഷണം, കൃഷി, ഭരണം, വ്യവസായം തുടങ്ങി വിവിധ മേഖലകളിൽ നിർമ്മിതബുദ്ധിയും ഡാറ്റാ സയൻസും അതിവേഗം പരിവർത്തന സാധ്യതകൾ തുറക്കുകയാണ്.
           </p>
-          <p>
-            This two-day conference, organised under the <strong>AICTE-VAANI (Vibrant Advocacy for Advancement and
-              Nurturing of Indian Languages) Scheme</strong>, aims to promote the dissemination of technical knowledge
-            in Malayalam and create awareness about emerging developments in Artificial Intelligence and related
-            technologies.
+          <p data-i18n="about_p1">
+            AICTE-VAANI പദ്ധതിയുടെ കീഴിൽ സംഘടിപ്പിക്കുന്ന ഈ ദ്വിദിന കോൺഫറൻസ് മലയാളത്തിലുള്ള സാങ്കേതിക പരിജ്ഞാനത്തിന്റെ വളർച്ചയും എ ഐയിലും അനുബന്ധ സാങ്കേതികവിദ്യകളിലും ഉയർന്നുവരുന്ന വികസനങ്ങളെക്കുറിച്ചുള്ള അവബോധ രൂപീകരണവും ലക്ഷ്യമിടുന്നു.
           </p>
-          <p>
-            The conference provides a common platform for academicians, researchers, students, industry professionals,
-            and technology enthusiasts to explore contemporary advancements in AI and Data Science, exchange research
-            ideas, and discuss their applications and societal impact through <strong>expert-led technical sessions
-              conducted in Malayalam</strong>.
+          <p data-i18n="about_p2">
+            അക്കാദമിക് വിദഗ്‌ധർ, ഗവേഷകർ, വിദ്യാർത്ഥികൾ, വ്യവസായരംഗത്തെ പ്രമുഖർ തുടങ്ങിയവർക്ക് എ ഐ, ഡാറ്റാ സയൻസ് എന്നിവയിലെ സമകാലിക മുന്നേറ്റങ്ങൾ അവതരിപ്പിക്കാനും ആശയങ്ങൾ കൈമാറാനും മികച്ച സാങ്കേതിക സെഷനുകളിലൂടെ അവയുടെ പ്രയോഗങ്ങളെയും സാമൂഹിക സ്വാധീനത്തെയും കുറിച്ച് മനസ്സിലാക്കാനും ചർച്ച ചെയ്യാനുമുള്ള ഒരു പൊതുവേദിയാണ് ഈ കോൺഫറൻസ്.
           </p>
 
           <!-- Structured Conference Objectives -->
           <div class="about-key-points">
-            <h4 class="about-points-title">Conference Focus &amp; Objectives</h4>
+            <h4 class="about-points-title" data-i18n="about_focus_title">കോൺഫറൻസിന്റെ മുഖ്യ ലക്ഷ്യങ്ങൾ</h4>
             <ul class="about-points-list">
               <li>
                 <span class="point-bullet"></span>
-                <span><strong>Regional Technical Discourse:</strong> Conducting expert sessions in Malayalam to enhance technical accessibility and nurture indigenous language computing.</span>
+                <span data-i18n="about_point1"><strong>മലയാളഭാഷയിലൂടെ സാങ്കേതികതയെ മനസ്സിലാക്കുക:</strong> മലയാളത്തിലുള്ള സാങ്കേതിക പരിജ്ഞാനത്തിന്റെ വളർച്ചയും പ്രാദേശിക ഭാഷാ കമ്പ്യൂട്ടിംഗും പ്രോത്സാഹിപ്പിക്കുക.</span>
               </li>
               <li>
                 <span class="point-bullet"></span>
-                <span><strong>Academic Exchange:</strong> Providing a peer-reviewed forum for faculty, research scholars, and students to present innovative findings.</span>
+                <span data-i18n="about_point2"><strong>ഗവേഷണവും അക്കാദമിക കൈമാറ്റവും:</strong> നൂതന ആശയങ്ങളും പ്രബന്ധങ്ങളും അവതരിപ്പിക്കാൻ അധ്യാപകർക്കും ഗവേഷകർക്കും വിദ്യാർത്ഥികൾക്കും വേദി നൽകുക.</span>
               </li>
               <li>
                 <span class="point-bullet"></span>
-                <span><strong>Societal Impact:</strong> Deliberating on responsible AI governance, ethics, and multi-sector applications in healthcare, education, and governance.</span>
+                <span data-i18n="about_point3"><strong>സാമൂഹിക സ്വാധീനം:</strong> ആരോഗ്യം, ഭരണം തുടങ്ങിയ മേഖലകളിൽ നിർമ്മിതബുദ്ധിയുടെ ഉത്തരവാദിത്തപരമായ പ്രയോഗങ്ങളും സാമൂഹിക സ്വാധീനവും ചർച്ച ചെയ്യുക.</span>
               </li>
             </ul>
           </div>
@@ -316,48 +516,48 @@
         <div class="about-sidebar">
           <div class="about-info-panel">
             <div class="info-panel-header">
-              <h3 class="info-panel-title">Conference Highlights</h3>
-              <span class="info-panel-subtitle">Official AICTE-VAANI Event</span>
+              <h3 class="info-panel-title" data-i18n="about_panel_title">കോൺഫറൻസ് വിശേഷങ്ങൾ</h3>
+              <span class="info-panel-subtitle" data-i18n="about_panel_subtitle">ഔദ്യോഗിക AICTE-VAANI പരിപാടി</span>
             </div>
 
             <div class="info-panel-body">
               <div class="info-item">
-                <span class="info-label">Scheme &amp; Sponsorship</span>
-                <h4 class="info-heading">AICTE-VAANI Scheme</h4>
-                <p class="info-text">
-                  Vibrant Advocacy for Advancement and Nurturing of Indian Languages. Promoting indigenous language computing and high-tech education in Malayalam.
+                <span class="info-label" data-i18n="about_card1_label">പദ്ധതിയും ധനസഹായവും</span>
+                <h4 class="info-heading" data-i18n="about_card1_heading">AICTE-VAANI പദ്ധതി</h4>
+                <p class="info-text" data-i18n="about_card1_text">
+                  ഭാരതീയ ഭാഷകളുടെ പ്രോത്സാഹനത്തിനും വളർച്ചയ്ക്കുമായുള്ള പദ്ധതി. മലയാളത്തിലൂടെയുള്ള സാങ്കേതിക വിദ്യാഭ്യാസവും പ്രാദേശിക ഭാഷാ കമ്പ്യൂട്ടിംഗും പ്രോത്സാഹിപ്പിക്കുന്നു.
                 </p>
               </div>
 
               <div class="info-item">
-                <span class="info-label">Registration</span>
-                <h4 class="info-heading">Free Registration</h4>
-                <p class="info-text">
-                  Supported by AICTE ATAL Academy. Open to faculty members, research scholars, and students with no registration fees.
+                <span class="info-label" data-i18n="about_card2_label">രജിസ്ട്രേഷൻ</span>
+                <h4 class="info-heading" data-i18n="about_card2_heading">സൗജന്യ രജിസ്ട്രേഷൻ</h4>
+                <p class="info-text" data-i18n="about_card2_text">
+                  AICTE അടൽ അക്കാദമിയുടെ പിന്തുണയോടെ. അധ്യാപകർക്കും ഗവേഷകർക്കും വിദ്യാർത്ഥികൾക്കും രജിസ്ട്രേഷൻ തികച്ചും സൗജന്യമാണ്.
                 </p>
               </div>
 
               <div class="info-item">
-                <span class="info-label">Publication</span>
-                <h4 class="info-heading">Proceedings with ISBN</h4>
-                <p class="info-text">
-                  All accepted and presented papers will be published in official conference proceedings with ISBN: <strong>978-81-985405-9-1</strong>.
+                <span class="info-label" data-i18n="about_card3_label">പ്രസിദ്ധീകരണം</span>
+                <h4 class="info-heading" data-i18n="about_card3_heading">ISBN സഹിതമുള്ള പ്രൊസീഡിംഗ്സ്</h4>
+                <p class="info-text" data-i18n="about_card3_text">
+                  തിരഞ്ഞടുക്കപ്പെടുന്ന പ്രബന്ധങ്ങൾ ISBN <strong>978-81-985405-9-1</strong> നമ്പറോടുകൂടിയ കോൺഫറൻസ് പ്രൊസീഡിംഗ്‌സിൽ പ്രസിദ്ധീകരിക്കും.
                 </p>
               </div>
 
               <div class="info-item info-item--footer">
                 <div class="info-meta-row">
                   <div>
-                    <span class="info-label">Dates</span>
-                    <span class="info-meta-val">Dec 8–9, 2026</span>
+                    <span class="info-label" data-i18n="about_meta_dates_label">തീയതികൾ</span>
+                    <span class="info-meta-val" data-i18n="about_meta_dates_val">ഡിസംബർ 8–9, 2026</span>
                   </div>
                   <div>
-                    <span class="info-label">Medium</span>
-                    <span class="info-meta-val">Malayalam</span>
+                    <span class="info-label" data-i18n="about_meta_medium_label">മാധ്യമം</span>
+                    <span class="info-meta-val" data-i18n="about_meta_medium_val">മലയാളം</span>
                   </div>
                   <div>
-                    <span class="info-label">Venue</span>
-                    <span class="info-meta-val">BMC Kochi</span>
+                    <span class="info-label" data-i18n="about_meta_venue_label">വേദി</span>
+                    <span class="info-meta-val" data-i18n="about_meta_venue_val">ഭാരത മാതാ കോളേജ്</span>
                   </div>
                 </div>
               </div>
@@ -379,9 +579,9 @@
   <section id="college" class="section section--white">
     <div class="container">
       <div class="section-title-wrap">
-        <h2 class="section-heading">About Bharata Mata College</h2>
+        <h2 class="section-heading" data-i18n="college_heading">ഭാരത മാതാ കോളേജ്</h2>
         <div class="title-underline"></div>
-        <p class="section-caption">Autonomous Institution · Affiliated with Mahatma Gandhi University · NAAC A+ Accredited</p>
+        <p class="section-caption" data-i18n="college_caption">ഓട്ടോണമസ് സ്ഥാപനം · മഹാത്മാഗാന്ധി സർവകലാശാല അഫിലിയേഷൻ · NAAC A+ അക്രഡിറ്റേഷൻ</p>
       </div>
 
       <div class="college-grid">
@@ -393,10 +593,10 @@
             <div class="college-photo-overlay" aria-hidden="true"></div>
             <div class="college-geom-badge">
               <div class="geom-badge-item">
-                <span class="geom-badge-gold">NAAC A+ Accredited</span>
-                <span class="geom-badge-sub">Established in 1965</span>
+                <span class="geom-badge-gold" data-i18n="college_badge_grade">NAAC A+ അക്രഡിറ്റേഷൻ</span>
+                <span class="geom-badge-sub" data-i18n="college_badge_est">1965-ൽ സ്ഥാപിതം</span>
               </div>
-              <span class="geom-badge-tag">AUTONOMOUS</span>
+              <span class="geom-badge-tag" data-i18n="college_badge_tag">ഓട്ടോണമസ്</span>
             </div>
           </div>
         </div>
@@ -404,49 +604,43 @@
         <!-- Institutional Narrative and Details -->
         <div class="college-info-box">
           <div class="college-motto-bar">
-            <span class="motto-label">College Motto</span>
+            <span class="motto-label" data-i18n="college_motto_label">കോളേജ് ആപ്തവാക്യം</span>
             <span class="motto-divider" aria-hidden="true">|</span>
-            <span class="motto-text">"For God and country"</span>
+            <span class="motto-text" data-i18n="college_motto_text">"ദൈവത്തിനും രാജ്യത്തിനും വേണ്ടി" (For God and Country)</span>
           </div>
 
-          <p>
-            <strong>Bharata Mata College (Autonomous) Thrikkakara</strong>, a prestigious institution established in
-            1965 under the Bharata Mata educational trust, is affiliated with <strong>Mahatma Gandhi University</strong>
-            and managed by the <strong>Archdiocese of Ernakulam-Angamaly</strong>.
+          <p data-i18n="college_p1">
+            1965-ൽ 'ഭാരത മാതാ എഡ്യൂക്കേഷണൽ ട്രസ്റ്റി'നു കീഴിൽ സ്ഥാപിതമായ ഭാരത മാതാ കോളേജ് (ഓട്ടോണമസ്), തൃക്കാക്കര, മഹാത്മാഗാന്ധി സർവകലാശാലയിൽ അഫിലിയേറ്റ് ചെയ്യപ്പെട്ട എറണാകുളം-അങ്കമാലി അതിരൂപതയുടെ കീഴിൽ പ്രവർത്തിക്കുന്ന ഒരു പ്രമുഖ വിദ്യാഭ്യാസ സ്ഥാപനമാണ്.
           </p>
-          <p>
-            Located along the seaport-airport road in Thrikkakara, the college earned an <strong>A+ grade from the
-              National Assessment and Accreditation Council (NAAC) in 2019</strong>, reflecting its sustained commitment
-            to excellence in higher education.
+          <p data-i18n="college_p2">
+            കൊച്ചി, കാക്കനാട്- തൃക്കാക്കര സീപോർട്ട്-എയർപോർട്ട് റോഡിന് സമീപത്തായി സ്ഥിതി ചെയ്യുന്നു. 2019-ൽ നാഷണൽ അസസ്മെന്റ് ആൻഡ് അക്രഡിറ്റേഷൻ കൗൺസിലിന്റെ (NAAC) 'A+' ഗ്രേഡ് കരസ്ഥമാക്കി.
           </p>
-          <p>
-            Emphasizing its motto "For God and country", the college delivers a holistic academic environment
-            prioritizing responsible citizenship, secular ethics, and innovative inquiry, preparing graduates to address
-            contemporary global challenges.
+          <p data-i18n="college_p3">
+            "ദൈവത്തിനും രാജ്യത്തിനും വേണ്ടി" (For God and Country) എന്ന ആപ്തവാക്യം ഉയർത്തിപ്പിടിക്കുന്ന കോളേജ്, ഉത്തരവാദിത്തമുള്ള പൗരത്വം, മതേതര കാഴ്ചപ്പാട്, ധാർമ്മിക മൂല്യങ്ങൾ എന്നിവയ്ക്ക് മുൻഗണന നൽകിക്കൊണ്ടുള്ള സമഗ്രമായ വിദ്യാഭ്യാസാനുഭവമാണ് വിദ്യാർത്ഥികൾക്ക് പകർന്നുനൽകുന്നത്. ആഗോള വെല്ലുവിളികളെ നേരിടാൻ സജ്ജരായ അക്കാദമികമായ അറിവും സമൂഹത്തിൽ സജീവമായി ഇടപെടുന്നതിന് ധാർമ്മിക അടിത്തറയുമുള്ള വിദ്യാർത്ഥികളെ വളർത്തിയെടുക്കാൻ ഈ സ്ഥാപനം ശ്രദ്ധ കേന്ദ്രീകരിക്കുന്നു.
           </p>
 
           <!-- Key Institutional Badges Grid -->
           <div class="college-meta-grid">
             <div class="college-meta-item">
-              <span class="meta-label">Accreditation</span>
-              <span class="meta-val">NAAC A+ (2019)</span>
+              <span class="meta-label" data-i18n="college_meta_accred_label">അക്രഡിറ്റേഷൻ</span>
+              <span class="meta-val" data-i18n="college_meta_accred_val">NAAC A+ (2019)</span>
             </div>
             <div class="college-meta-item">
-              <span class="meta-label">Status</span>
-              <span class="meta-val">Autonomous</span>
+              <span class="meta-label" data-i18n="college_meta_status_label">പദവി</span>
+              <span class="meta-val" data-i18n="college_meta_status_val">ഓട്ടോണമസ്</span>
             </div>
             <div class="college-meta-item">
-              <span class="meta-label">Affiliation</span>
-              <span class="meta-val">MG University</span>
+              <span class="meta-label" data-i18n="college_meta_affil_label">അഫിലിയേഷൻ</span>
+              <span class="meta-val" data-i18n="college_meta_affil_val">എം.ജി. സർവകലാശാല</span>
             </div>
             <div class="college-meta-item">
-              <span class="meta-label">Founded</span>
-              <span class="meta-val">1965</span>
+              <span class="meta-label" data-i18n="college_meta_founded_label">സ്ഥാപിതം</span>
+              <span class="meta-val" data-i18n="college_meta_founded_val">1965</span>
             </div>
           </div>
 
           <a href="https://www.bharatamatacollege.in/" target="_blank" rel="noopener noreferrer" class="college-portal-link">
-            <span>Visit Official College Website</span>
+            <span data-i18n="college_portal_btn">ഔദ്യോഗിക കോളേജ് വെബ്സൈറ്റ് സന്ദർശിക്കുക</span>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
@@ -468,34 +662,30 @@
   <section id="departments" class="section section--light">
     <div class="container">
       <div class="section-title-wrap">
-        <h2 class="section-heading">Organising Departments</h2>
+        <h2 class="section-heading" data-i18n="depts_heading">കോൺഫറൻസ് സംഘടിപ്പിക്കുന്ന വകുപ്പുകൾ</h2>
         <div class="title-underline"></div>
       </div>
 
       <div class="depts-grid">
         <div class="dept-box">
-          <div class="dept-header-tag">Government-Aided Stream</div>
-          <h3 class="dept-title">Department of Computer Science</h3>
-          <p class="dept-desc">
-            Established in <strong>January 2021</strong> within the Government-aided stream, the Department of Computer
-            Science offers a pioneering <strong>Integrated MSc in AI and Machine Learning</strong>.
+          <div class="dept-header-tag" data-i18n="dept1_tag">ഗവൺമെന്റ് എയ്ഡഡ് വിഭാഗം</div>
+          <h3 class="dept-title" data-i18n="dept1_title">കമ്പ്യൂട്ടർ സയൻസ് വിഭാഗം</h3>
+          <p class="dept-desc" data-i18n="dept1_desc1">
+            2021 ജനുവരിയിൽ സർക്കാർ ധനസഹായത്തോടെ സ്ഥാപിതമായ കമ്പ്യൂട്ടർ സയൻസ് വകുപ്പ്, ആർട്ടിഫിഷ്യൽ ഇന്റലിജൻസ്, മെഷീൻ ലേണിംഗ് എന്നിവയിൽ ഇന്റഗ്രേറ്റഡ് എം.എസ്‌.സി. കോഴ്സ് നടത്തിവരുന്നു.
           </p>
-          <p class="dept-desc">
-            The program blends theoretical foundation with practical skills and ethical values, equipping socially
-            responsible graduates to address modern technological challenges across academia and industries worldwide.
+          <p class="dept-desc" data-i18n="dept1_desc2">
+            പ്രായോഗിക കഴിവുകളും സൈദ്ധാന്തിക അറിവും സമന്വയിപ്പിക്കുന്ന ഈ പാഠ്യപദ്ധതി, വിവിധ വ്യവസായ മേഖലകളിലെ ആധുനിക സാങ്കേതിക വെല്ലുവിളികളെ നേരിടാൻ സാമൂഹിക ഉത്തരവാദിത്തമുള്ള ബിരുദധാരികളെ സജ്ജമാക്കുന്നു.
           </p>
         </div>
 
         <div class="dept-box">
-          <div class="dept-header-tag">Pioneer in Vocational Malayalam</div>
-          <h3 class="dept-title">Department of Malayalam</h3>
-          <p class="dept-desc">
-            Established in <strong>1965</strong> for second-language Malayalam, the department launched Kerala’s first
-            <strong>BA Malayalam Copywriting (Vocational)</strong> course in 1998 under Prof. Somavarma Raja.
+          <div class="dept-header-tag" data-i18n="dept2_tag">വൊക്കേഷണൽ മലയാളത്തിന്റെ തുടക്കക്കാർ</div>
+          <h3 class="dept-title" data-i18n="dept2_title">മലയാളവിഭാഗം</h3>
+          <p class="dept-desc" data-i18n="dept2_desc1">
+            1965-ൽ രണ്ടാം ഭാഷ മലയാളത്തിനായി സ്ഥാപിതമായ മലയാളവിഭാഗം, 1998-ൽ പ്രൊഫ. സോമവർമ രാജയുടെ കീഴിൽ കേരളത്തിലെ ആദ്യത്തെ ബി.എ. മലയാളം കോപ്പിറൈറ്റിംഗ് (വൊക്കേഷണൽ) കോഴ്‌സ് ആരംഭിച്ചു.
           </p>
-          <p class="dept-desc">
-            Designed for practical industry integration, it has successfully prepared students for reputable positions
-            across leading media houses, creative communications, literature, and distinguished teaching careers.
+          <p class="dept-desc" data-i18n="dept2_desc2">
+            തൊഴിലധിഷ്ഠിത കോഴ്‌സ് എന്ന നിലയിൽ പരസ്യ-മാധ്യമ- ചലച്ചിത്ര മേഖലകളിൽ പ്രവർത്തിക്കുന്ന നിരവധി പ്രൊഫഷണലുകളെ വാർത്തെടുക്കാൻ ഈ കോഴ്‌സിന് കഴിഞ്ഞിട്ടുണ്ട്.
           </p>
         </div>
       </div>
@@ -519,7 +709,7 @@
     <!-- Top Full-Width Blue Rectangle Banner -->
     <div class="objectives-header-banner">
       <div class="container">
-        <h2 class="section-heading objectives-banner-heading">Conference Objectives</h2>
+        <h2 class="section-heading objectives-banner-heading" data-i18n="objectives_heading">കോൺഫറൻസിന്റെ ലക്ഷ്യങ്ങൾ</h2>
       </div>
     </div>
 
@@ -530,48 +720,48 @@
           <li class="objective-bullet-item">
             <span class="objective-bullet-dot" aria-hidden="true"></span>
             <div class="objective-bullet-content">
-              <h3 class="objective-bullet-title">Bridging the Language Gap</h3>
-              <p class="objective-bullet-desc">Disseminating advanced technical and AI knowledge in Malayalam to make technology inclusive and vernacularly accessible.</p>
+              <h3 class="objective-bullet-title" data-i18n="obj_title_1">മലയാളഭാഷയിലൂടെ സാങ്കേതികതയെ മനസ്സിലാക്കുക</h3>
+              <p class="objective-bullet-desc" data-i18n="obj_desc_1">മലയാളത്തിലുള്ള സാങ്കേതിക പരിജ്ഞാനത്തിന്റെ വളർച്ചയും പ്രാദേശിക ഭാഷാ കമ്പ്യൂട്ടിംഗും പ്രോത്സാഹിപ്പിക്കുക.</p>
             </div>
           </li>
 
           <li class="objective-bullet-item">
             <span class="objective-bullet-dot" aria-hidden="true"></span>
             <div class="objective-bullet-content">
-              <h3 class="objective-bullet-title">Promoting Emerging Technologies</h3>
-              <p class="objective-bullet-desc">Creating deep awareness about modern developments in Artificial Intelligence, Machine Learning, and Big Data.</p>
+              <h3 class="objective-bullet-title" data-i18n="obj_title_2">വളർന്നുവരുന്ന സാങ്കേതികവിദ്യകളെ പ്രോത്സാഹിപ്പിക്കുക</h3>
+              <p class="objective-bullet-desc" data-i18n="obj_desc_2">എ ഐയിലും അനുബന്ധ സാങ്കേതികവിദ്യകളിലും ഉയർന്നുവരുന്ന വികസനങ്ങളെക്കുറിച്ചുള്ള അവബോധ രൂപീകരണം.</p>
             </div>
           </li>
 
           <li class="objective-bullet-item">
             <span class="objective-bullet-dot" aria-hidden="true"></span>
             <div class="objective-bullet-content">
-              <h3 class="objective-bullet-title">Encouraging Research &amp; Innovation</h3>
-              <p class="objective-bullet-desc">Providing a platform for young researchers, academicians, and scholars to present novel and interdisciplinary ideas.</p>
+              <h3 class="objective-bullet-title" data-i18n="obj_title_3">ഗവേഷണത്തെയും പുതിയ അന്വേഷണങ്ങളെയും പ്രോത്സാഹിപ്പിക്കുക</h3>
+              <p class="objective-bullet-desc" data-i18n="obj_desc_3">ഗവേഷകർക്കും വിദ്യാർത്ഥികൾക്കും തങ്ങളുടെ നൂതന ആശയങ്ങളും പ്രബന്ധങ്ങളും അവതരിപ്പിക്കാൻ മികച്ച വേദി ഒരുക്കുക.</p>
             </div>
           </li>
 
           <li class="objective-bullet-item">
             <span class="objective-bullet-dot" aria-hidden="true"></span>
             <div class="objective-bullet-content">
-              <h3 class="objective-bullet-title">Strengthening Industry Collaboration</h3>
-              <p class="objective-bullet-desc">Bridging academia with leading IT firms, Infopark organizations, and regional development initiatives.</p>
+              <h3 class="objective-bullet-title" data-i18n="obj_title_4">അക്കാദമിക്-വ്യവസായ സഹകരണം ശക്തിപ്പെടുത്തുക</h3>
+              <p class="objective-bullet-desc" data-i18n="obj_desc_4">വിദ്യാഭ്യാസ സ്ഥാപനങ്ങളും ഇൻഫോപാർക്ക് ഉൾപ്പെടെയുള്ള പ്രമുഖ ഐ.ടി. വ്യവസായ സംരംഭങ്ങളും തമ്മിലുള്ള സഹകരണം വർദ്ധിപ്പിക്കുക.</p>
             </div>
           </li>
 
           <li class="objective-bullet-item">
             <span class="objective-bullet-dot" aria-hidden="true"></span>
             <div class="objective-bullet-content">
-              <h3 class="objective-bullet-title">Promoting Inclusive Technical Education</h3>
-              <p class="objective-bullet-desc">Democratizing AI literacy across all academic streams through accessible Malayalam-medium presentations.</p>
+              <h3 class="objective-bullet-title" data-i18n="obj_title_5">സമഗ്രമായ സാങ്കേതിക വിദ്യാഭ്യാസത്തിന് വഴിയൊരുക്കുക</h3>
+              <p class="objective-bullet-desc" data-i18n="obj_desc_5">എല്ലാ മേഖലകളിൽ നിന്നുള്ളവർക്കും ആർട്ടിഫിഷ്യൽ ഇന്റലിജൻസ് വിജ്ഞാനം മലയാളത്തിലൂടെ ലളിതമായി ലഭ്യമാക്കുക.</p>
             </div>
           </li>
 
           <li class="objective-bullet-item">
             <span class="objective-bullet-dot" aria-hidden="true"></span>
             <div class="objective-bullet-content">
-              <h3 class="objective-bullet-title">Addressing Societal Challenges</h3>
-              <p class="objective-bullet-desc">Examining ethical, cultural, linguistic, and public administration impacts of AI in Kerala and beyond.</p>
+              <h3 class="objective-bullet-title" data-i18n="obj_title_6">സാമൂഹിക വെല്ലുവിളികളെ അഭിസംബോധന ചെയ്യുക</h3>
+              <p class="objective-bullet-desc" data-i18n="obj_desc_6">എ ഐയുടെ ധാർമ്മികത, സുരക്ഷ, പൊതുഭരണം, ഭാഷാസംരക്ഷണം എന്നിവയിലെ പ്രയോഗങ്ങളും വെല്ലുവിളികളും ചർച്ച ചെയ്യുക.</p>
             </div>
           </li>
         </ul>
@@ -674,18 +864,15 @@
         <!-- Right Content Column -->
         <div class="participate-content-col">
           <div class="section-title-wrap participate-title-wrap">
-            <h2 class="participate-heading">Who Can Participate?</h2>
+            <h2 class="participate-heading" data-i18n="participate_heading">ആർക്കൊക്കെ പങ്കെടുക്കാം?</h2>
             <div class="participate-underline"></div>
           </div>
 
-          <p class="participate-lead">
-            Participation is open to faculty members, postgraduate students, research scholars, and industry
-            professionals from all academic disciplines.
+          <p class="participate-lead" data-i18n="participate_lead">
+            വിവിധ അക്കാദമിക മേഖലകളിൽ നിന്നുള്ള അധ്യാപകർ, ബിരുദാനന്തര ബിരുദ വിദ്യാർത്ഥികൾ, ഗവേഷകർ, വ്യവസായ രംഗത്തെ പ്രൊഫഷണലുകൾ എന്നിവർക്ക് ഇതിൽ പങ്കെടുക്കാവുന്നതാണ്.
           </p>
-          <p class="participate-muted">
-            AI enthusiasts from diverse fields of study are encouraged to participate and present their research papers,
-            innovative ideas, and interdisciplinary contributions in Artificial Intelligence, Data Science, and emerging
-            technologies.
+          <p class="participate-muted" data-i18n="participate_muted">
+            ആർട്ടിഫിഷ്യൽ ഇന്റലിജൻസ്, ഡാറ്റാ സയൻസ്, വളർന്നുവരുന്ന സാങ്കേതികവിദ്യകൾ എന്നീ മേഖലകളിൽ താൽപ്പര്യമുള്ളവർക്ക്, തങ്ങളുടെ ഗവേഷണപ്രബന്ധങ്ങൾ, നൂതന ആശയങ്ങൾ, വിവിധ വിഷയങ്ങളെ സമന്വയിപ്പിക്കുന്ന സംഭാവനകൾ എന്നിവ അവതരിപ്പിക്കാൻ അവസരമുണ്ട്.
           </p>
         </div>
 
@@ -704,51 +891,35 @@
   <section id="tracks" class="section section--white">
     <div class="container">
       <div class="section-title-wrap">
-        <h2 class="section-heading">Conference Tracks</h2>
+        <h2 class="section-heading" data-i18n="tracks_heading">കോൺഫറൻസിന്റെ വിഷയമേഖലകൾ (Conference Tracks)</h2>
         <div class="title-underline"></div>
-        <p class="section-caption">Original, unpublished research contributions are invited across five peer-reviewed
-          thematic tracks. All technical presentations and paper discussions are conducted in Malayalam under the
-          AICTE-VAANI scheme.</p>
+        <p class="section-caption" data-i18n="tracks_caption">താഴെ പറയുന്ന അഞ്ച് പ്രധാന വിഷയമേഖലകളിലായി പ്രബന്ധങ്ങൾ ക്ഷണിക്കുന്നു. AICTE-VAANI പദ്ധതി പ്രകാരം സാങ്കേതിക സെഷനുകളും ചർച്ചകളും മലയാളത്തിലായിരിക്കും.</p>
       </div>
 
       <!-- Compact Tracks List -->
       <div class="tracks-compact-container">
         <ul class="tracks-compact-list">
           <li class="track-compact-row">
-            <span class="track-compact-badge">Track 01</span>
-            <span class="track-compact-title">Foundations of Artificial Intelligence &amp; Advanced Models</span>
+            <span class="track-compact-badge" data-i18n="track_badge_1">ട്രാക്ക് 01</span>
+            <span class="track-compact-title" data-i18n="track_title_1">ആർട്ടിഫിഷ്യൽ ഇന്റലിജൻസിന്റെ അടിസ്ഥാനങ്ങളും നൂതന മാതൃകകളും</span>
           </li>
           <li class="track-compact-row">
-            <span class="track-compact-badge">Track 02</span>
-            <span class="track-compact-title">Upskilling and Reskilling for Industry 4.0 / 5.0</span>
+            <span class="track-compact-badge" data-i18n="track_badge_2">ട്രാക്ക് 02</span>
+            <span class="track-compact-title" data-i18n="track_title_2">ഇൻഡസ്ട്രി 4.0 / 5.0-ന് വേണ്ടിയുള്ള നൈപുണി വികസനവും പുനർനൈപുണി വികസനവും (Upskilling &amp; Reskilling)</span>
           </li>
           <li class="track-compact-row">
-            <span class="track-compact-badge">Track 03</span>
-            <span class="track-compact-title">Societal Impact, Ethics, Security &amp; Applications</span>
+            <span class="track-compact-badge" data-i18n="track_badge_3">ട്രാക്ക് 03</span>
+            <span class="track-compact-title" data-i18n="track_title_3">സാമൂഹിക സ്വാധീനം, ധാർമ്മികത, സുരക്ഷ, പ്രയോഗങ്ങൾ</span>
           </li>
           <li class="track-compact-row">
-            <span class="track-compact-badge">Track 04</span>
-            <span class="track-compact-title">Regional Language Computing &amp; Digital Preservation</span>
+            <span class="track-compact-badge" data-i18n="track_badge_4">ട്രാക്ക് 04</span>
+            <span class="track-compact-title" data-i18n="track_title_4">പ്രാദേശിക ഭാഷാ കമ്പ്യൂട്ടിംഗും ഡിജിറ്റൽ സംരക്ഷണവും</span>
           </li>
           <li class="track-compact-row">
-            <span class="track-compact-badge">Track 05</span>
-            <span class="track-compact-title">AI in E-Governance, Policy &amp; Public Administration</span>
+            <span class="track-compact-badge" data-i18n="track_badge_5">ട്രാക്ക് 05</span>
+            <span class="track-compact-title" data-i18n="track_title_5">ഇ-ഗവേണൻസ്, നയം, പൊതുഭരണം എന്നിവയിൽ കൃത്രിമബുദ്ധിയുടെ ഉപയോഗം</span>
           </li>
         </ul>
-      </div>
-
-      <!-- Tracks Action & Guidance Strip -->
-      <div class="tracks-cta-banner">
-        <div class="tracks-cta-banner__info">
-          <div class="tracks-cta-badge">CALL FOR PAPERS</div>
-          <p class="tracks-cta-text">All submissions undergo double-blind peer review by the academic committee.
-            Accepted papers will be featured in technical presentation sessions and official conference proceedings.</p>
-        </div>
-        <div class="tracks-cta-banner__action">
-          <a href="https://forms.gle/KteEkgCyCaEmKGit8" target="_blank" rel="noopener noreferrer" class="btn btn--navy">
-            <span>Submit Abstract / Paper</span>
-          </a>
-        </div>
       </div>
 
     </div>
@@ -765,7 +936,7 @@
   <section id="dates" class="section section--navy text-white dates-section">
     <div class="container">
       <div class="section-title-wrap text-center">
-        <h2 class="section-heading text-white">Important Dates</h2>
+        <h2 class="section-heading text-white" data-i18n="dates_heading">പ്രധാനപ്പെട്ട തീയതികൾ &amp; വിവരങ്ങൾ</h2>
         <div class="title-underline title-underline--gold"></div>
       </div>
 
@@ -775,10 +946,10 @@
         <div class="date-group">
           <div class="date-group__num">05</div>
           <div class="date-group__content">
-            <span class="date-group__month">DECEMBER 2026</span>
+            <span class="date-group__month" data-i18n="date_month_1">ഡിസംബർ 2026</span>
             <div class="date-group__events">
-              <span class="date-group__event">Abstract &amp; Full Paper Submission</span>
-              <span class="date-group__event">Last Date of Registration</span>
+              <span class="date-group__event" data-i18n="date_event_1a">സംഗ്രഹം/പൂർണ്ണരൂപത്തിലുള്ള പ്രബന്ധം സമർപ്പിക്കേണ്ട അവസാന തീയതി</span>
+              <span class="date-group__event" data-i18n="date_event_1b">രജിസ്ട്രേഷനുള്ള അവസാന തീയതി</span>
             </div>
           </div>
         </div>
@@ -787,9 +958,9 @@
         <div class="date-group date-group--highlight">
           <div class="date-group__num">08–09</div>
           <div class="date-group__content">
-            <span class="date-group__month">DECEMBER 2026</span>
+            <span class="date-group__month" data-i18n="date_month_2">ഡിസംബർ 2026</span>
             <div class="date-group__events">
-              <span class="date-group__event">Conference Days</span>
+              <span class="date-group__event" data-i18n="date_event_2">കോൺഫറൻസ് ദിവസങ്ങൾ</span>
             </div>
           </div>
         </div>
@@ -808,25 +979,24 @@
   <section id="papers" class="section section--light cfp-section">
     <div class="container">
       <div class="cfp-wrap text-center">
-        <h2 class="cfp-title">Call for Papers</h2>
-        <p class="cfp-lead">
-          All accepted and presented papers will be published in the conference proceedings with an official ISBN.
+        <h2 class="cfp-title" data-i18n="cfp_title">പ്രബന്ധങ്ങൾ ക്ഷണിക്കുന്നു</h2>
+        <p class="cfp-lead" data-i18n="cfp_lead">
+          തിരഞ്ഞടുക്കപ്പെടുന്ന പ്രബന്ധങ്ങൾ, ISBN 978-81-985405-9-1 നമ്പറോടുകൂടിയ കോൺഫറൻസ് പ്രൊസീഡിംഗ്‌സിൽ പ്രസിദ്ധീകരിക്കുന്നതാണ്.
         </p>
 
         <div class="isbn-highlight-bar">
-          <span class="isbn-label">PUBLICATION ISBN</span>
+          <span class="isbn-label" data-i18n="isbn_label">പ്രൊസീഡിംഗ്സ് ISBN</span>
           <span class="isbn-code">978-81-985405-9-1</span>
         </div>
 
-        <p class="cfp-text">
-          Submit your original research papers, case studies, and interdisciplinary contributions focusing on AI and
-          Data Science. Presentations and papers are encouraged in Malayalam and English as per conference guidelines.
+        <p class="cfp-text" data-i18n="cfp_text">
+          ആർട്ടിഫിഷ്യൽ ഇന്റലിജൻസ്, ഡാറ്റാ സയൻസ് എന്നീ മേഖലകളിലെ ഗവേഷണ പ്രബന്ധങ്ങൾ, കേസ് സ്റ്റഡികൾ, വിവിധ വിഷയങ്ങളെ സമന്വയിപ്പിച്ചുകൊണ്ടുള്ള പഠനങ്ങൾ എന്നിവ സമർപ്പിക്കാം.
         </p>
 
         <div class="cfp-actions">
           <a href="https://forms.gle/KteEkgCyCaEmKGit8" target="_blank" rel="noopener noreferrer"
             class="btn btn--gold btn--lg">
-            Submit / Register Paper Online →
+            <span data-i18n="cfp_btn">ഓൺലൈനായി പ്രബന്ധം സമർപ്പിക്കുക / രജിസ്റ്റർ ചെയ്യുക →</span>
           </a>
         </div>
       </div>
@@ -836,18 +1006,15 @@
   <!-- >>>>> END PART 10: CALL FOR PAPERS (ISBN PUBLICATION) <<<<< -->
   <!-- ========================================================================== -->
 
-
-
   <!-- ========================================================================== -->
   <!-- >>>>> START PART 11: KEYNOTE SPEAKERS <<<<< -->
   <!-- ========================================================================== -->
   <section id="speakers" class="section section--white">
     <div class="container">
       <div class="section-title-wrap">
-        <h2 class="section-heading">Keynote Speakers</h2>
+        <h2 class="section-heading" data-i18n="speakers_heading">പ്രധാന പ്രഭാഷകർ</h2>
         <div class="title-underline"></div>
-        <p class="section-caption">Eminent leaders and researchers from industry, government bodies, and premier
-          universities.</p>
+        <p class="section-caption" data-i18n="speakers_caption">വ്യവസായ രംഗം, സർക്കാർ സ്ഥാപനങ്ങൾ, പ്രമുഖ സർവകലാശാലകൾ എന്നിവയിൽ നിന്നുള്ള പ്രമുഖ വിദഗ്ധർ.</p>
       </div>
 
       <div class="speakers-grid">
@@ -860,9 +1027,9 @@
             <div class="speaker-initials" style="display:none;">BJ</div>
           </div>
           <div class="speaker-card__info">
-            <h4 class="speaker-name">Er. Binu Janardanan</h4>
-            <p class="speaker-designation">Scientist F / Associate Director</p>
-            <p class="speaker-org">Health Technology Group<br />C-DAC Trivandrum</p>
+            <h4 class="speaker-name" data-i18n="speaker_name_1">ബിനു ജനാർദ്ദനൻ</h4>
+            <p class="speaker-designation" data-i18n="speaker_role_1">സയന്റിസ്റ്റ് F / അസോസിയേറ്റ് ഡയറക്ടർ</p>
+            <p class="speaker-org" data-i18n="speaker_org_1">ഹെൽത്ത് ടെക്നോളജി ഗ്രൂപ്പ്<br />സി-ഡാക് (C-DAC) തിരുവനന്തപുരം</p>
           </div>
         </div>
 
@@ -874,9 +1041,9 @@
             <div class="speaker-initials" style="display:none;">JS</div>
           </div>
           <div class="speaker-card__info">
-            <h4 class="speaker-name">Mr. Joy Sebastian</h4>
-            <p class="speaker-designation">Chief Executive Officer (CEO)</p>
-            <p class="speaker-org">Techgentsia<br />Infopark, Kochi</p>
+            <h4 class="speaker-name" data-i18n="speaker_name_2">ജോയ് സെബാസ്റ്റ്യൻ</h4>
+            <p class="speaker-designation" data-i18n="speaker_role_2">ചീഫ് എക്സിക്യൂട്ടീവ് ഓഫീസർ (CEO)</p>
+            <p class="speaker-org" data-i18n="speaker_org_2">ടെക്ജെൻഷ്യ<br />ഇൻഫോപാർക്ക്, കൊച്ചി</p>
           </div>
         </div>
 
@@ -888,23 +1055,23 @@
             <div class="speaker-initials" style="display:none;">YK</div>
           </div>
           <div class="speaker-card__info">
-            <h4 class="speaker-name">Yadu Krishnan</h4>
-            <p class="speaker-designation">Product Designer</p>
-            <p class="speaker-org">KeyValue Software Systems<br />Infopark, Kochi</p>
+            <h4 class="speaker-name" data-i18n="speaker_name_3">യദു കൃഷ്ണൻ</h4>
+            <p class="speaker-designation" data-i18n="speaker_role_3">പ്രോഡക്റ്റ് ഡിസൈനർ</p>
+            <p class="speaker-org" data-i18n="speaker_org_3">കീവാല്യൂ സോഫ്റ്റ്‌വെയർ സിസ്റ്റംസ്<br />ഇൻഫോപാർക്ക്, കൊച്ചി</p>
           </div>
         </div>
 
         <!-- Speaker 4 -->
         <div class="speaker-card">
           <div class="speaker-card__avatar-wrap">
-            <img src="assets/speakers/vivek.jpg" alt="Dr. Vivek Vivek P" class="speaker-photo"
+            <img src="assets/speakers/vivek.jpg" alt="Dr. Vivek P" class="speaker-photo"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
             <div class="speaker-initials" style="display:none;">VV</div>
           </div>
           <div class="speaker-card__info">
-            <h4 class="speaker-name">Dr. Vivek Vivek P</h4>
-            <p class="speaker-designation">Director, IT Directorate &amp; Asst. Professor</p>
-            <p class="speaker-org">UGC-MMTTC<br />Kannur University</p>
+            <h4 class="speaker-name" data-i18n="speaker_name_4">ഡോ. വിവേക് പി</h4>
+            <p class="speaker-designation" data-i18n="speaker_role_4">ഡയറക്ടർ, ഐ.ടി. ഡയറക്ടറേറ്റ് &amp; അസിസ്റ്റന്റ് പ്രൊഫസർ</p>
+            <p class="speaker-org" data-i18n="speaker_org_4">യു.ജി.സി.-എം.എം.ടി.ടി.സി. (UGC-MMTTC)<br />കണ്ണൂർ സർവകലാശാല</p>
           </div>
         </div>
 
@@ -916,9 +1083,9 @@
             <div class="speaker-initials" style="display:none;">BK</div>
           </div>
           <div class="speaker-card__info">
-            <h4 class="speaker-name">Dr. Baiju K B</h4>
-            <p class="speaker-designation">Assistant Professor &amp; HoD of Computer Science</p>
-            <p class="speaker-org">NMSM Govt College</p>
+            <h4 class="speaker-name" data-i18n="speaker_name_5">ഡോ. ബൈജു കെ ബി</h4>
+            <p class="speaker-designation" data-i18n="speaker_role_5">അസിസ്റ്റന്റ് പ്രൊഫസർ &amp; വകുപ്പ് മേധാവി</p>
+            <p class="speaker-org" data-i18n="speaker_org_5">കമ്പ്യൂട്ടർ സയൻസ് വിഭാഗം<br />എൻ.എം.എസ്.എം. ഗവൺമെന്റ് കോളേജ്</p>
           </div>
         </div>
 
@@ -930,9 +1097,9 @@
             <div class="speaker-initials" style="display:none;">SM</div>
           </div>
           <div class="speaker-card__info">
-            <h4 class="speaker-name">Dr. Sreeraj M</h4>
-            <p class="speaker-designation">Assistant Professor</p>
-            <p class="speaker-org">Department of Computer Science<br />Sree Ayyappa College</p>
+            <h4 class="speaker-name" data-i18n="speaker_name_6">ഡോ. ശ്രീരാജ് എം</h4>
+            <p class="speaker-designation" data-i18n="speaker_role_6">അസിസ്റ്റന്റ് പ്രൊഫസർ</p>
+            <p class="speaker-org" data-i18n="speaker_org_6">കമ്പ്യൂട്ടർ സയൻസ് വിഭാഗം<br />ശ്രീ അയ്യപ്പ കോളേജ്</p>
           </div>
         </div>
 
@@ -944,9 +1111,9 @@
             <div class="speaker-initials" style="display:none;">BC</div>
           </div>
           <div class="speaker-card__info">
-            <h4 class="speaker-name">Dr. Benson C C</h4>
-            <p class="speaker-designation">Assistant Professor</p>
-            <p class="speaker-org">Department of Computer Applications<br />Mar Dionysius College</p>
+            <h4 class="speaker-name" data-i18n="speaker_name_7">ഡോ. ബെൻസൺ സി സി</h4>
+            <p class="speaker-designation" data-i18n="speaker_role_7">അസിസ്റ്റന്റ് പ്രൊഫസർ</p>
+            <p class="speaker-org" data-i18n="speaker_org_7">കമ്പ്യൂട്ടർ ആപ്ലിക്കേഷൻസ് വിഭാഗം<br />മാർ ഡയോനിസിയസ് കോളേജ്</p>
           </div>
         </div>
 
@@ -958,9 +1125,9 @@
             <div class="speaker-initials" style="display:none;">RN</div>
           </div>
           <div class="speaker-card__info">
-            <h4 class="speaker-name">Dr. Raji N R</h4>
-            <p class="speaker-designation">Assistant Professor &amp; In-charge</p>
-            <p class="speaker-org">Department of Computer Science<br />NISH</p>
+            <h4 class="speaker-name" data-i18n="speaker_name_8">ഡോ. രാജി എൻ ആർ</h4>
+            <p class="speaker-designation" data-i18n="speaker_role_8">അസിസ്റ്റന്റ് പ്രൊഫസർ &amp; ഇൻ-ചാർജ്</p>
+            <p class="speaker-org" data-i18n="speaker_org_8">കമ്പ്യൂട്ടർ സയൻസ് വിഭാഗം<br />നിഷ് (NISH)</p>
           </div>
         </div>
 
@@ -972,9 +1139,9 @@
             <div class="speaker-initials" style="display:none;">AK</div>
           </div>
           <div class="speaker-card__info">
-            <h4 class="speaker-name">Dr. Aljinu Khader K V</h4>
-            <p class="speaker-designation">Assistant Professor</p>
-            <p class="speaker-org">Department of Computer Science<br />University of Calicut</p>
+            <h4 class="speaker-name" data-i18n="speaker_name_9">ഡോ. അൽജിനു ഖാദിർ കെ വി</h4>
+            <p class="speaker-designation" data-i18n="speaker_role_9">അസിസ്റ്റന്റ് പ്രൊഫസർ</p>
+            <p class="speaker-org" data-i18n="speaker_org_9">കമ്പ്യൂട്ടർ സയൻസ് വിഭാഗം<br />കാലിക്കറ്റ് സർവകലാശാല</p>
           </div>
         </div>
 
@@ -993,10 +1160,10 @@
   <section id="registration" class="section section--light">
     <div class="container max-w-900">
       <div class="section-title-wrap text-center">
-        <h2 class="section-heading">Registration Guide</h2>
+        <h2 class="section-heading" data-i18n="reg_heading">രജിസ്ട്രേഷൻ വിവരങ്ങൾ</h2>
         <div class="title-underline"></div>
-        <p class="free-reg-text">
-          Registration is <span class="free-reg-highlight">100% FREE</span> under AICTE-VAANI Scheme
+        <p class="free-reg-text" data-i18n="reg_free_text">
+          രജിസ്ട്രേഷൻ <span class="free-reg-highlight">തികച്ചും സൗജന്യമാണ്</span> (AICTE-VAANI പദ്ധതി)
         </p>
       </div>
 
@@ -1005,8 +1172,8 @@
         <div class="reg-step-item">
           <span class="step-num">01</span>
           <div class="step-body">
-            <h4>Visit the AICTE ATAL Academy Portal</h4>
-            <p>Access the official portal at <a href="https://atalacademy.aicte.gov.in/" target="_blank"
+            <h4 data-i18n="step_title_1">എ.ഐ.സി.ടി.ഇ. അടൽ അക്കാദമി പോർട്ടൽ സന്ദർശിക്കുക</h4>
+            <p data-i18n="step_text_1">ഔദ്യോഗിക പോർട്ടൽ സന്ദർശിക്കുക: <a href="https://atalacademy.aicte.gov.in/" target="_blank"
                 rel="noopener noreferrer">atalacademy.aicte.gov.in</a></p>
           </div>
         </div>
@@ -1014,8 +1181,8 @@
         <div class="reg-step-item">
           <span class="step-num">02</span>
           <div class="step-body">
-            <h4>Sign Up / Login</h4>
-            <p>New participants should click Sign Up and create an account at <a
+            <h4 data-i18n="step_title_2">Sign Up / ലോഗിൻ ചെയ്യുക</h4>
+            <p data-i18n="step_text_2">പുതിയ ഉപയോക്താക്കൾ "Sign Up" തിരഞ്ഞെടുത്ത് വ്യക്തിഗത വിവരങ്ങൾ നൽകി രജിസ്ട്രേഷൻ പൂർത്തിയാക്കുക: <a
                 href="https://atalacademy.aicte.gov.in/signup" target="_blank"
                 rel="noopener noreferrer">atalacademy.aicte.gov.in/signup</a></p>
           </div>
@@ -1024,43 +1191,41 @@
         <div class="reg-step-item">
           <span class="step-num">03</span>
           <div class="step-body">
-            <h4>Navigate to FDPs Menu</h4>
-            <p>After logging into your dashboard, go to the <strong>FDPs</strong> menu.</p>
+            <h4 data-i18n="step_title_3">FDPs മെനുവിലേക്ക് പോവുക</h4>
+            <p data-i18n="step_text_3">ലോഗിൻ ചെയ്‌ത ശേഷം, FDPs മെനുവിലേക്ക് പോയി താഴെ പറയുന്നവ തിരഞ്ഞെടുക്കുക:<br/><strong>FDP Type: Vaani</strong> | <strong>Month: December</strong> | <strong>Mode: Offline</strong></p>
           </div>
         </div>
 
         <div class="reg-step-item">
           <span class="step-num">04</span>
           <div class="step-body">
-            <h4>Filter &amp; Search for the Conference</h4>
-            <p>Select: <strong>FDP Type: VAANI</strong> | <strong>Month: December</strong> | <strong>Mode: Offline</strong></p>
-            <p>Press <kbd>Ctrl + F</kbd> and search for: <strong>Artificial Intelligence: Concepts, Skills and Society</strong></p>
-            <span class="app-num-inline">Application Number: <code>2574946848</code></span>
+            <h4 data-i18n="step_title_4">കോൺഫറൻസ് തിരയുക</h4>
+            <p data-i18n="step_text_4"><kbd>Ctrl + F</kbd> ഉപയോഗിച്ച് താഴെ പറയുന്ന തലക്കെട്ട് തിരയുക:<br/><strong>‘എ ഐ &amp; ഡാറ്റാ സയൻസ്- സങ്കല്പനം, സാങ്കേതികത, സമൂഹം’</strong></p>
+            <span class="app-num-inline" data-i18n="step_app_num_4">അപേക്ഷ നമ്പർ: <code>2574946848</code></span>
           </div>
         </div>
 
         <div class="reg-step-item">
           <span class="step-num">05</span>
           <div class="step-body">
-            <h4>Select Bharata Mata College</h4>
-            <p>Apply for the conference organized by <strong>Bharata Mata College, Kochi, Kerala</strong> (Department of
-              Computer Science – AI &amp; ML and Department of Malayalam).</p>
+            <h4 data-i18n="step_title_5">ഭാരത മാതാ കോളേജ് തിരഞ്ഞെടുക്കുക</h4>
+            <p data-i18n="step_text_5">ഭാരത മാതാ കോളേജ്, കമ്പ്യൂട്ടർ സയൻസ് വിഭാഗ(AI &amp; ML)വും മലയാളവിഭാഗവും സംയുക്തമായി സംഘടിപ്പിക്കുന്ന കോൺഫറൻസിനായി ‘Apply’ ക്ലിക്ക് ചെയ്യുക.</p>
           </div>
         </div>
 
         <div class="reg-step-item">
           <span class="step-num">06</span>
           <div class="step-body">
-            <h4>Complete Profile &amp; Required Documents</h4>
-            <p>Fill in your institutional details, NOC/identity verification if prompted by ATAL portal.</p>
+            <h4 data-i18n="step_title_6">വിവരങ്ങളും രേഖകളും സമർപ്പിക്കുക</h4>
+            <p data-i18n="step_text_6">ആവശ്യമായ വിവരങ്ങൾ പൂരിപ്പിച്ച്, ആവശ്യപ്പെടുന്ന പക്ഷം ബന്ധപ്പെട്ട രേഖകൾ അപ്‌ലോഡ് ചെയ്യുക.</p>
           </div>
         </div>
 
         <div class="reg-step-item">
           <span class="step-num">07</span>
           <div class="step-body">
-            <h4>Click Apply / Submit</h4>
-            <p>Complete your registration to receive confirmation and attendance guidelines.</p>
+            <h4 data-i18n="step_title_7">Apply / Submit ക്ലിക്ക് ചെയ്യുക</h4>
+            <p data-i18n="step_text_7">രജിസ്ട്രേഷൻ പൂർത്തിയാക്കാൻ 'Apply/Submit' എന്നതിൽ ക്ലിക്ക് ചെയ്യുക.</p>
           </div>
         </div>
 
@@ -1069,7 +1234,7 @@
       <div class="text-center mt-30">
         <a href="https://atalacademy.aicte.gov.in/" target="_blank" rel="noopener noreferrer"
           class="btn btn--gold btn--lg">
-          Register for Free on ATAL Portal →
+          <span data-i18n="reg_cta_btn">അടൽ പോർട്ടലിൽ സൗജന്യമായി രജിസ്റ്റർ ചെയ്യുക →</span>
         </a>
       </div>
     </div>
@@ -1088,8 +1253,8 @@
 
       <!-- Section Header -->
       <div class="section-title-wrap text-center">
-        <span class="committee-eyebrow">LEADERSHIP &amp; COMMITTEE</span>
-        <h2 class="section-heading text-white">Organizing Committee</h2>
+        <span class="committee-eyebrow" data-i18n="comm_eyebrow">നേതൃത്വവും സംഘാടക സമിതിയും</span>
+        <h2 class="section-heading text-white" data-i18n="comm_heading">സംഘാടക സമിതി</h2>
         <div class="title-underline title-underline--gold"></div>
       </div>
 
@@ -1098,15 +1263,15 @@
 
         <!-- Tier 1: Chief Patrons -->
         <div class="comm-group">
-          <h3 class="comm-group__title">Chief Patrons</h3>
+          <h3 class="comm-group__title" data-i18n="comm_tier1_title">മുഖ്യ രക്ഷാധികാരികൾ</h3>
           <div class="comm-group__grid comm-group__grid--2">
             <div class="comm-person">
-              <h4 class="comm-person__name">Rev. Fr. Dr. Abraham Oliapurath</h4>
-              <p class="comm-person__role">Manager, Bharata Mata College</p>
+              <h4 class="comm-person__name" data-i18n="comm_patron_1_name">റവ. ഫാ. ഡോ. എബ്രഹാം ഒലിയപുറത്ത്</h4>
+              <p class="comm-person__role" data-i18n="comm_patron_1_role">മാനേജർ, ഭാരത മാതാ കോളേജ്</p>
             </div>
             <div class="comm-person">
-              <h4 class="comm-person__name">Rev. Fr. Sebastian (Sen) Kallungal</h4>
-              <p class="comm-person__role">Assistant Manager, Bharata Mata College</p>
+              <h4 class="comm-person__name" data-i18n="comm_patron_2_name">റവ. ഫാ. സെബാസ്റ്റ്യൻ കല്ലുങ്കൽ</h4>
+              <p class="comm-person__role" data-i18n="comm_patron_2_role">അസിസ്റ്റന്റ് മാനേജർ, ഭാരത മാതാ കോളേജ്</p>
             </div>
           </div>
         </div>
@@ -1115,19 +1280,19 @@
 
         <!-- Tier 2: Patrons -->
         <div class="comm-group">
-          <h3 class="comm-group__title">Patrons</h3>
+          <h3 class="comm-group__title" data-i18n="comm_tier2_title">രക്ഷാധികാരികൾ</h3>
           <div class="comm-group__grid comm-group__grid--3">
             <div class="comm-person">
-              <h4 class="comm-person__name">Dr. Soumya Thomas</h4>
-              <p class="comm-person__role">Principal in Charge</p>
+              <h4 class="comm-person__name" data-i18n="comm_patron_3_name">ഡോ. സൗമ്യ തോമസ്</h4>
+              <p class="comm-person__role" data-i18n="comm_patron_3_role">പ്രിൻസിപ്പൽ ഇൻ ചാർജ്</p>
             </div>
             <div class="comm-person">
-              <h4 class="comm-person__name">Prof. Dr. Johnson K. M</h4>
-              <p class="comm-person__role">Academic Director</p>
+              <h4 class="comm-person__name" data-i18n="comm_patron_4_name">പ്രൊഫ. ഡോ. ജോൺസൺ കെ. എം.</h4>
+              <p class="comm-person__role" data-i18n="comm_patron_4_role">അക്കാദമിക് ഡയറക്ടർ</p>
             </div>
             <div class="comm-person">
-              <h4 class="comm-person__name">Ms. Bini Rani Jose</h4>
-              <p class="comm-person__role">Vice Principal</p>
+              <h4 class="comm-person__name" data-i18n="comm_patron_5_name">ശ്രീമതി. ബിനി റാണി ജോസ്</h4>
+              <p class="comm-person__role" data-i18n="comm_patron_5_role">വൈസ് പ്രിൻസിപ്പൽ</p>
             </div>
           </div>
         </div>
@@ -1136,19 +1301,19 @@
 
         <!-- Tier 3: Coordinators -->
         <div class="comm-group">
-          <h3 class="comm-group__title">Coordinators</h3>
+          <h3 class="comm-group__title" data-i18n="comm_tier3_title">സംഘാടകർ</h3>
           <div class="comm-group__grid comm-group__grid--3">
             <div class="comm-person">
-              <h4 class="comm-person__name">Dr. John T Abraham</h4>
-              <p class="comm-person__role">Dean &amp; HoD / Coordinator · Dept of Computer Science</p>
+              <h4 class="comm-person__name" data-i18n="comm_coord_1_name">ഡോ. ജോൺ ടി. എബ്രഹാം</h4>
+              <p class="comm-person__role" data-i18n="comm_coord_1_role">കോർഡിനേറ്റർ (ഡീൻ &amp; വകുപ്പദ്ധ്യക്ഷൻ, കമ്പ്യൂട്ടർ സയൻസ് വിഭാഗം)</p>
             </div>
             <div class="comm-person">
-              <h4 class="comm-person__name">Fr. Anish Paul</h4>
-              <p class="comm-person__role">Co-Coordinator · Bharata Mata College</p>
+              <h4 class="comm-person__name" data-i18n="comm_coord_2_name">ഫാ. ഡോ. അനീഷ് പോൾ</h4>
+              <p class="comm-person__role" data-i18n="comm_coord_2_role">സഹ-കോർഡിനേറ്റർ (വകുപ്പദ്ധ്യക്ഷൻ, മലയാളവിഭാഗം)</p>
             </div>
             <div class="comm-person">
-              <h4 class="comm-person__name">Ms. Deepa V</h4>
-              <p class="comm-person__role">Convenor · Dept of Computer Science</p>
+              <h4 class="comm-person__name" data-i18n="comm_coord_3_name">ശ്രീമതി. ദീപ വി</h4>
+              <p class="comm-person__role" data-i18n="comm_coord_3_role">കൺവീനർ (കമ്പ്യൂട്ടർ സയൻസ് വിഭാഗം)</p>
             </div>
           </div>
         </div>
@@ -1157,19 +1322,19 @@
 
         <!-- Tier 4: Organizing Members -->
         <div class="comm-group">
-          <h3 class="comm-group__title">Organizing Members</h3>
+          <h3 class="comm-group__title" data-i18n="comm_tier4_title">സംഘാടക സമിതി അംഗങ്ങൾ</h3>
           <div class="comm-members-grid">
-            <span class="comm-member">Dr. Thomas Varghese</span>
-            <span class="comm-member">Dr. Varghese Paul</span>
-            <span class="comm-member">Dr. Aleena K Noble</span>
-            <span class="comm-member">Mr. Harikrishnan P</span>
-            <span class="comm-member">Ms. Devika D</span>
-            <span class="comm-member">Ms. Alphonsa Sini</span>
-            <span class="comm-member">Ms. Binsha Benny</span>
-            <span class="comm-member">Ms. Anisha Poly</span>
-            <span class="comm-member">Ms. Greety Domanic</span>
-            <span class="comm-member">Ms. Samridha Puthiyil</span>
-            <span class="comm-member">Ms. Jeevana Sajeev</span>
+            <span class="comm-member" data-i18n="comm_member_1">ഡോ. തോമസ് വർഗീസ്</span>
+            <span class="comm-member" data-i18n="comm_member_2">ഫാ. ഡോ. വർഗീസ് പോൾ</span>
+            <span class="comm-member" data-i18n="comm_member_3">ഡോ. അലീന കെ. നോബിൾ</span>
+            <span class="comm-member" data-i18n="comm_member_4">ശ്രീ. ഹരികൃഷ്‌ണൻ പി</span>
+            <span class="comm-member" data-i18n="comm_member_5">ശ്രീമതി. ദേവിക ഡി</span>
+            <span class="comm-member" data-i18n="comm_member_6">ശ്രീമതി. അൽഫോൻസ സിനി</span>
+            <span class="comm-member" data-i18n="comm_member_7">ശ്രീമതി. ബിൻഷ ബെന്നി</span>
+            <span class="comm-member" data-i18n="comm_member_8">ശ്രീമതി. അനിഷ പോളി</span>
+            <span class="comm-member" data-i18n="comm_member_9">ശ്രീമതി. ഗ്രീറ്റി ഡൊമാനിക്</span>
+            <span class="comm-member" data-i18n="comm_member_10">ശ്രീമതി. സമൃദ്ധ പുതിയിൽ</span>
+            <span class="comm-member" data-i18n="comm_member_11">ജീവന സജീവ്</span>
           </div>
         </div>
 
@@ -1194,10 +1359,9 @@
 
       <!-- 1. Heading Area (Centered Heading & Underline) -->
       <div class="contact-header-wrap">
-        <h2 class="section-heading contact-heading">Contact Us</h2>
+        <h2 class="section-heading contact-heading" data-i18n="contact_heading">കൂടുതൽ വിവരങ്ങൾക്ക് ബന്ധപ്പെടുക</h2>
         <div class="contact-underline"></div>
-        <p class="contact-subtext">Reach out to our organizing team for conference inquiries, registration assistance,
-          and venue directions.</p>
+        <p class="contact-subtext" data-i18n="contact_subtext">കോൺഫറൻസ് അന്വേഷണങ്ങൾ, രജിസ്ട്രേഷൻ സഹായം, വേദി വിവരങ്ങൾ എന്നിവയ്ക്കായി ബന്ധപ്പെടുക.</p>
       </div>
 
       <!-- 2. Single Unified Box -->
@@ -1212,12 +1376,12 @@
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              <span>CONFERENCE VENUE</span>
+              <span data-i18n="venue_tag">കോൺഫറൻസ് വേദി</span>
             </span>
-            <h3 class="venue-hero__title">Bharata Mata College (Autonomous)</h3>
-            <p class="venue-hero__address">
-              Seaport - Airport Road, Thrikkakara,<br />
-              Kochi, Kerala, Pin: 682021
+            <h3 class="venue-hero__title" data-i18n="venue_title">ഭാരത മാതാ കോളേജ് (ഓട്ടോണമസ്)</h3>
+            <p class="venue-hero__address" data-i18n="venue_address">
+              സീപോർട്ട് - എയർപോർട്ട് റോഡ്, തൃക്കാക്കര,<br />
+              കൊച്ചി, കേരളം, പിൻ: 682021
             </p>
           </div>
 
@@ -1238,8 +1402,8 @@
             <!-- Line 1: Dr. John T. Abraham -->
             <div class="contact-line-item contact-card-animate" data-card-index="1">
               <div class="contact-line-left">
-                <h4 class="contact-name">Dr. John T. Abraham</h4>
-                <span class="contact-designation">Coordinator</span>
+                <h4 class="contact-name" data-i18n="contact_name_1">ഡോ. ജോൺ ടി. എബ്രഹാം</h4>
+                <span class="contact-designation" data-i18n="contact_role_1">കോർഡിനേറ്റർ</span>
               </div>
               <div class="contact-line-right">
                 <a href="tel:+919447116484" class="contact-link" aria-label="Call +91 94471 16484">
@@ -1260,8 +1424,8 @@
             <!-- Line 2: Ms. Deepa V -->
             <div class="contact-line-item contact-card-animate" data-card-index="2">
               <div class="contact-line-left">
-                <h4 class="contact-name">Ms. Deepa V</h4>
-                <span class="contact-designation">Convenor</span>
+                <h4 class="contact-name" data-i18n="contact_name_2">ശ്രീമതി. ദീപ വി.</h4>
+                <span class="contact-designation" data-i18n="contact_role_2">കൺവീനർ</span>
               </div>
               <div class="contact-line-right">
                 <a href="tel:+918547230613" class="contact-link" aria-label="Call +91 85472 30613">
@@ -1282,16 +1446,30 @@
             <!-- Line 3: Fr. Anish Paul -->
             <div class="contact-line-item contact-card-animate" data-card-index="3">
               <div class="contact-line-left">
-                <h4 class="contact-name">Fr. Anish Paul</h4>
-                <span class="contact-designation">Co-Coordinator</span>
+                <h4 class="contact-name" data-i18n="contact_name_3">ഫാ. ഡോ. അനീഷ് പോൾ</h4>
+                <span class="contact-designation" data-i18n="contact_role_3">സഹ-കോർഡിനേറ്റർ</span>
+              </div>
+              <div class="contact-line-right">
+                <a href="tel:+919605555238" class="contact-link" aria-label="Call +91 96055 55238">
+                  <svg class="contact-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  <span>+91 96055 55238</span>
+                </a>
+                <a href="tel:+919605555238" class="circle-action-btn" title="Call Fr. Anish Paul"
+                  aria-label="Call Fr. Anish Paul">
+                  <span class="material-symbols-rounded" aria-hidden="true">call</span>
+                </a>
               </div>
             </div>
 
             <!-- Line 4: Email (BMC Conference Email) -->
             <div class="contact-line-item contact-card-animate" data-card-index="4">
               <div class="contact-line-left">
-                <h4 class="contact-name">Email</h4>
-                <span class="contact-designation">Conference Enquiries</span>
+                <h4 class="contact-name" data-i18n="contact_name_4">ഇമെയിൽ</h4>
+                <span class="contact-designation" data-i18n="contact_role_4">കോൺഫറൻസ് അന്വേഷണങ്ങൾക്ക്</span>
               </div>
               <div class="contact-line-right">
                 <a href="mailto:bmcvaani@gmail.com" class="contact-link" aria-label="Email bmcvaani@gmail.com">
@@ -1312,8 +1490,8 @@
             <!-- Line 5: BMC Website -->
             <div class="contact-line-item contact-card-animate" data-card-index="5">
               <div class="contact-line-left">
-                <h4 class="contact-name">BMC Website</h4>
-                <span class="contact-designation">Official Portal</span>
+                <h4 class="contact-name" data-i18n="contact_name_5">കോളേജ് വെബ്സൈറ്റ്</h4>
+                <span class="contact-designation" data-i18n="contact_role_5">ഔദ്യോഗിക പോർട്ടൽ</span>
               </div>
               <div class="contact-line-right">
                 <a href="https://www.bharatamatacollege.in/" target="_blank" rel="noopener noreferrer"
@@ -1360,60 +1538,40 @@
             <img src="assets/logos/college-logo.png" alt="BMC" class="footer-logo"
               onerror="this.style.display='none';" />
             <div>
-              <h4 class="footer-title">BHARATA MATA COLLEGE</h4>
-              <p class="footer-sub">Autonomous · Thrikkakara, Kochi-21</p>
+              <h4 class="footer-title" data-i18n="footer_title">ഭാരത മാതാ കോളേജ്</h4>
+              <p class="footer-sub" data-i18n="footer_sub">ഓട്ടോണമസ് &bull; തൃക്കാക്കര, കൊച്ചി-21</p>
             </div>
           </div>
-          <p class="footer-lead">
-            AI &amp; Data Science: Concepts, Skills &amp; Society
-          </p>
-          <p class="footer-text">
-            Conducted in Malayalam under the AICTE-VAANI Scheme. December 8–9, 2026.
+          <p class="footer-lead" data-i18n="footer_lead">
+            എ ഐ &amp; ഡാറ്റാ സയൻസ്: സങ്കല്പനം, സാങ്കേതികത, സമൂഹം
           </p>
         </div>
 
         <div class="footer-col">
-          <h5 class="footer-heading">Quick Navigation</h5>
+          <h5 class="footer-heading" data-i18n="footer_heading_nav">നാവിഗേഷൻ</h5>
           <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Conference</a></li>
-            <li><a href="#college">Host College</a></li>
-            <li><a href="#tracks">Tracks</a></li>
-            <li><a href="#speakers">Keynote Speakers</a></li>
-            <li><a href="#dates">Important Dates</a></li>
+            <li><a href="#home" data-i18n="footer_nav_home">ഹോം</a></li>
+            <li><a href="#about" data-i18n="footer_nav_about">വിവരണം</a></li>
+            <li><a href="#tracks" data-i18n="footer_nav_tracks">വിഷയമേഖലകൾ</a></li>
+            <li><a href="#dates" data-i18n="footer_nav_dates">പ്രധാന തീയതികൾ</a></li>
+            <li><a href="#speakers" data-i18n="footer_nav_speakers">പ്രഭാഷകർ</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h5 class="footer-heading">Registration &amp; Submissions</h5>
+          <h5 class="footer-heading" data-i18n="footer_heading_quick">പ്രധാന ലിങ്കുകൾ</h5>
           <ul class="footer-links">
-            <li><a href="https://atalacademy.aicte.gov.in/" target="_blank" rel="noopener noreferrer">AICTE ATAL Portal
-                (Free Reg)</a></li>
-            <li><a href="https://forms.gle/KteEkgCyCaEmKGit8" target="_blank" rel="noopener noreferrer">Paper Submission
-                Form</a></li>
-            <li><a href="https://www.bharatamatacollege.in/" target="_blank" rel="noopener noreferrer">Official College
-                Website</a></li>
-            <li><a href="mailto:bmcvaani@gmail.com">bmcvaani@gmail.com</a></li>
+            <li><a href="https://atalacademy.aicte.gov.in/" target="_blank" rel="noopener noreferrer" data-i18n="footer_link_reg">രജിസ്ട്രേഷൻ (ATAL പോർട്ടൽ)</a></li>
+            <li><a href="https://forms.gle/KteEkgCyCaEmKGit8" target="_blank" rel="noopener noreferrer" data-i18n="footer_link_sub">പ്രബന്ധ സമർപ്പണം</a></li>
+            <li><a href="#contact" data-i18n="footer_link_con">ബന്ധപ്പെടുക &amp; വേദി</a></li>
+            <li><a href="https://www.bharatamatacollege.in/" target="_blank" rel="noopener noreferrer" data-i18n="footer_link_web">കോളേജ് വെബ്സൈറ്റ്</a></li>
           </ul>
-        </div>
-
-        <div class="footer-col">
-          <h5 class="footer-heading">Under Scheme</h5>
-          <p class="footer-text">
-            <strong>AICTE-VAANI</strong><br />
-            (Vibrant Advocacy for Advancement and Nurturing of Indian Languages)
-          </p>
-          <p class="footer-text mt-10">
-            Jointly organized by the <strong>Department of Computer Science</strong> and the <strong>Department of
-              Malayalam</strong>.
-          </p>
         </div>
 
       </div>
 
       <div class="footer-bottom-bar">
-        <p>© 2026 Bharata Mata College (Autonomous), Thrikkakara. All rights reserved.</p>
-        <p>National Conference on Artificial Intelligence: Concepts, Skills and Society</p>
+        <p data-i18n="footer_copyright">&copy; 2026 ഭാരത മാതാ കോളേജ് (ഓട്ടോണമസ്), തൃക്കാക്കര. സർവ്വ അവകാശങ്ങളും നിക്ഷിപ്തം.</p>
       </div>
     </div>
   </footer>
