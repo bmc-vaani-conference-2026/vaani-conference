@@ -426,7 +426,7 @@ kbd {
 
 /* College Logo Banner on the left */
 .header-logo--bmc {
-  height: clamp(36px, 4.5vw, 52px);
+  height: clamp(48px, 5.2vw, 64px);
   max-width: 100%;
 }
 
@@ -434,20 +434,20 @@ kbd {
 .partner-logos-pair {
   display: flex;
   align-items: center;
-  gap: clamp(0.35rem, 1vw, 0.75rem);
-  padding-left: clamp(0.5rem, 1.5vw, 1.25rem);
+  gap: clamp(0.5rem, 1.2vw, 0.95rem);
+  padding-left: clamp(0.65rem, 1.6vw, 1.35rem);
   border-left: 2px solid var(--border-light);
 }
 
 /* AICTE Logo */
 .header-logo--aicte {
-  height: clamp(38px, 4.8vw, 56px);
+  height: clamp(52px, 5.6vw, 70px);
   max-width: 100%;
 }
 
 /* ATAL Logo */
 .header-logo--atal {
-  height: clamp(36px, 4.5vw, 52px);
+  height: clamp(48px, 5.2vw, 64px);
   max-width: 100%;
 }
 
@@ -755,7 +755,7 @@ body.sidebar-locked {
 }
 
 .sidebar-logo {
-  height: 34px;
+  height: 52px;
   width: auto;
   object-fit: contain;
 }
@@ -4217,7 +4217,7 @@ body.sidebar-locked {
 }
 
 .footer-logo {
-  height: 44px;
+  height: 58px;
   width: auto;
   object-fit: contain;
 }
@@ -4381,6 +4381,18 @@ body.sidebar-locked {
     justify-content: flex-start;
     flex-wrap: nowrap;
     gap: 0.65rem;
+  }
+
+  .header-logo--bmc {
+    height: clamp(38px, 4.5vw, 48px);
+  }
+
+  .header-logo--aicte {
+    height: clamp(44px, 5.0vw, 54px);
+  }
+
+  .header-logo--atal {
+    height: clamp(40px, 4.6vw, 50px);
   }
 
   .header-right-group {
@@ -4547,38 +4559,52 @@ body.sidebar-locked {
 
   /* Header & Navigation — Compact Single Row with Hamburger */
   .top-bar__container {
-    padding: 0.5rem var(--mobile-gutter, 1.25rem);
+    padding: 0.55rem 0.65rem;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 0.65rem;
+    gap: 0.45rem;
     width: 100%;
     box-sizing: border-box;
   }
 
   .header-logos-group {
-    gap: 0.45rem;
-    justify-content: flex-start;
+    display: flex;
     align-items: center;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    flex: 1;
+    min-width: 0;
     flex-wrap: nowrap;
   }
 
+  .header-logo-item--bmc {
+    flex: 0 1 auto;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+  }
+
   .header-logo--bmc {
-    height: 24px;
+    height: clamp(30px, 7.2vw, 38px);
+    max-width: 100%;
   }
 
   .partner-logos-pair {
-    gap: 0.35rem;
-    padding-left: 0.4rem;
-    border-left-width: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding-left: 0.45rem;
+    border-left: 1.5px solid var(--border-light);
+    flex-shrink: 0;
   }
 
   .header-logo--aicte {
-    height: 25px;
+    height: clamp(36px, 8.6vw, 44px);
   }
 
   .header-logo--atal {
-    height: 23px;
+    height: clamp(32px, 8.0vw, 40px);
   }
 
   .header-right-group {
@@ -5516,7 +5542,7 @@ body.sidebar-locked {
   }
 
   .footer-logo {
-    height: 34px;
+    height: 48px;
   }
 
   .footer-title {
@@ -5634,20 +5660,49 @@ body.sidebar-locked {
     font-size: 0.88rem;
   }
 
+  .top-bar__container {
+    padding: 0.45rem 0.5rem;
+    gap: 0.35rem;
+  }
+
+  .hamburger-btn {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+  }
+
   .hamburger-line {
     width: 17px;
   }
 
+  .header-logos-group {
+    gap: 0.35rem;
+  }
+
   .header-logo--bmc {
-    height: 20px;
+    height: 28px;
+    max-height: 32px;
+  }
+
+  .partner-logos-pair {
+    gap: 0.3rem;
+    padding-left: 0.35rem;
+    border-left-width: 1px;
   }
 
   .header-logo--aicte {
-    height: 22px;
+    height: 34px;
   }
 
   .header-logo--atal {
-    height: 20px;
+    height: 30px;
+  }
+
+  .lang-toggle-btn {
+    height: 32px;
+    min-height: 32px;
+    padding: 0 0.55rem;
+    font-size: 0.74rem;
   }
 
   .hero__title-lockup {
@@ -5740,15 +5795,27 @@ body.sidebar-locked {
   }
 
   .about-points-title {
-    font-size: 1.18rem;
+    font-size: 1.25rem;
     font-weight: 800;
     line-height: 1.3;
   }
 
+  .key-point-item,
+  .about-points-list li {
+    font-size: 0.90rem;
+    line-height: 1.55;
+    gap: 0.55rem;
+  }
+
   .info-panel-title {
-    font-size: 1.22rem;
+    font-size: 1.28rem;
     font-weight: 800;
     line-height: 1.25;
+  }
+
+  .info-panel-subtitle {
+    font-size: 0.82rem;
+    font-weight: 700;
   }
 
   .info-panel-body {
@@ -5757,28 +5824,28 @@ body.sidebar-locked {
   }
 
   .info-item {
-    padding: 0.55rem 0;
+    padding: 0.65rem 0;
   }
 
   .info-label {
-    font-size: 0.7rem;
-    margin-bottom: 0.12rem;
+    font-size: 0.76rem;
+    margin-bottom: 0.15rem;
     font-weight: 700;
   }
 
   .info-heading {
-    font-size: 0.98rem;
+    font-size: 1.05rem;
     font-weight: 800;
-    margin-bottom: 0.18rem;
+    margin-bottom: 0.2rem;
   }
 
   .info-text {
-    font-size: 0.88rem;
-    line-height: 1.5;
+    font-size: 0.90rem;
+    line-height: 1.55;
   }
 
   .info-item--footer {
-    padding-top: 0.55rem;
+    padding-top: 0.6rem;
   }
 
   .info-meta-row {
@@ -5786,8 +5853,12 @@ body.sidebar-locked {
   }
 
   .info-meta-val {
-    font-size: 0.84rem;
+    font-size: 0.88rem;
     font-weight: 700;
+  }
+
+  .footer-logo {
+    height: 44px;
   }
 
   .date-group {
